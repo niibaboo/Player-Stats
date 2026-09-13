@@ -1,101 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Player Stat Model</title>
-<style>
-body{background:#0f1a2a;color:#fff;font-family:-apple-system,sans-serif;margin:0;padding:16px}
-h1{margin:0}.sub{color:#8aa0b8;font-size:14px;margin:6px 0 14px}
-.tabs{display:flex;gap:8px;margin-bottom:12px}
-.tab{flex:1;padding:10px;border-radius:10px;border:0;font-weight:600}
-.tab.active{background:#ffb000;color:#000}.tab.inactive{background:#1e2d44;color:#fff}
-.filters{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
-select{background:#1e2d44;color:#fff;border:1px solid #2a3d5f;border-radius:8px;padding:8px 12px;flex:1;min-width:140px}
-.card{background:#14233a;border-left:3px solid #ffb000;border-radius:12px;padding:12px;margin-bottom:10px}
-.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.badge{background:#0d2a2a;color:#4ecdc4;border:1px solid #1a4a4a;border-radius:20px;padding:4px 10px;font-size:12px}
-.badge.hit{background:#ffb000;color:#000;border-color:#ffb000;font-weight:700}
-.meta{font-size:12px;color:#8aa0b8}
-</style>
-</head>
-<body>
-<div style="color:#4ecdc4;font-size:12px;font-weight:700;letter-spacing:1px">PLAYER PROPS</div>
-<h1>Player Stat Model</h1>
-<div class="sub" id="sub">Loading data...</div>
-<div class="tabs">
-<button class="tab active" id="screenerTab" onclick="showTab('screener')">Screener</button>
-<button class="tab inactive" id="playerTab" onclick="showTab('player')">Player</button>
-</div>
-<div class="filters">
-<select id="teamFilter" onchange="render()"><option value="ALL">All Teams</option></select>
-<select id="marketFilter" onchange="render()">
-<option value="ALL">All Markets</option>
-<option value="shots_over_1.5">Over 1.5 shots</option>
-<option value="sot_over_0.5">Over 0.5 SOT</option>
-<option value="to_be_carded">To be carded</option>
-<option value="goal_or_assist">Goal or assist</option>
-</select>
-</div>
-<div id="content">Loading...</div>
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stats</title></head>
+<body style="background:#0f1a2a;color:#fff;font-family:sans-serif;padding:16px">
+<h2 id="status">Loading...</h2>
+<div id="list"></div>
 <script>
-let DATA=null;
-let currentTab='screener';
-async function load(){
- try{
-  const res=await fetch('./player_stats_data.json?v='+Date.now());
-  DATA=await res.json();
-  const count=Object.keys(DATA.players||{}).length;
-  document.getElementById('sub').innerText=count+' players loaded • '+ (DATA.screener?.generated_at||'') + ' • Blended form + Poisson';
-  const teams=[...new Set(Object.values(DATA.players||{}).map(p=>p.team_name||'Unknown'))].sort();
-  const tf=document.getElementById('teamFilter');
-  teams.forEach(t=>{ if(t && t!='Unknown'){ let o=document.createElement('option'); o.value=t; o.textContent=t; tf.appendChild(o); } });
-  render();
- } catch(e){
-  document.getElementById('content').innerHTML='<div style="color:#ff6b6b">Error loading json: '+e+'</div>';
- }
-}
-function showTab(t){
- currentTab=t;
- document.getElementById('screenerTab').className='tab '+(t=='screener'?'active':'inactive');
- document.getElementById('playerTab').className='tab '+(t=='player'?'active':'inactive');
- render();
-}
-function render(){
- const teamF=document.getElementById('teamFilter').value;
- const marketF=document.getElementById('marketFilter').value;
- const container=document.getElementById('content');
- if(!DATA){ container.innerHTML='Loading...'; return; }
- let players=Object.values(DATA.players||{});
- if(teamF!=='ALL') players=players.filter(p=>(p.team_name||'')===teamF);
- if(marketF!=='ALL') players=players.filter(p=>(p.props?.[marketF]||0)>=0.10);
- players.sort((a,b)=>(b.props?.[marketF!=='ALL'?marketF:'goal_or_assist']||0)-(a.props?.[marketF!=='ALL'?marketF:'goal_or_assist']||0));
- if(currentTab==='screener'){
-  if(players.length==0){ container.innerHTML='<div style="padding:20px;color:#8aa0b8">No players for this filter. Try All Teams / All Markets.</div>'; return; }
-  container.innerHTML=players.map(p=>{
-    const props=p.props||{};
-    return `<div class="card"><b>${p.player_name}</b><div class="meta">${p.team_name} • ${p.expected_minutes} mins exp</div><div class="badges">
-    <span class="badge ${marketF=='shots_over_1.5'?'hit':''}">Over 1.5 shots · ${Math.round((props.shots_over_1.5||0)*100)}%</span>
-    <span class="badge ${marketF=='sot_over_0.5'?'hit':''}">Over 0.5 SOT · ${Math.round((props.sot_over_0.5||0)*100)}%</span>
-    <span class="badge ${marketF=='to_be_carded'?'hit':''}">Carded · ${Math.round((props.to_be_carded||0)*100)}%</span>
-    <span class="badge ${marketF=='goal_or_assist'?'hit':''}">Goal/Assist · ${Math.round((props.goal_or_assist||0)*100)}%</span>
-    </div></div>`;
-  }).join('');
- } else {
-  let opts=players.map(p=>`<option value="${p.player_name}">${p.player_name} (${p.team_name})</option>`).join('');
-  container.innerHTML=`<select id="playerSelect" onchange="showPlayer()" style="width:100%;padding:12px;background:#1e2d44;color:#fff;border-radius:8px"><option>Select player</option>${opts}</select><div id="playerDetail" style="margin-top:12px"></div>`;
- }
-}
-function showPlayer(){
- const name=document.getElementById('playerSelect').value;
- const p=DATA.players[name];
- if(!p) return;
- document.getElementById('playerDetail').innerHTML=`<div class="card"><b>${p.player_name}</b><div class="meta">${p.team_name} • ${p.expected_minutes} mins</div><div class="badges">
- <span class="badge">Over 1.5 shots · ${Math.round((p.props.shots_over_1.5||0)*100)}%</span>
- <span class="badge">Over 0.5 SOT · ${Math.round((p.props.sot_over_0.5||0)*100)}%</span>
- <span class="badge">Carded · ${Math.round((p.props.to_be_carded||0)*100)}%</span>
- <span class="badge">Goal/Assist · ${Math.round((p.props.goal_or_assist||0)*100)}%</span></div></div>`;
-}
-load();
+fetch('./player_stats_data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
+ document.getElementById('status').innerText=Object.keys(d.players).length+' players';
+ let html='';
+ Object.values(d.players).forEach(p=>{
+   html+=`<div style="background:#14233a;padding:10px;margin:8px 0;border-radius:8px"><b>${p.player_name}</b> - ${p.team_name}<br>Shots 1.5: ${Math.round(p.props.shots_over_1.5*100)}% | SOT 0.5: ${Math.round(p.props.sot_over_0.5*100)}%</div>`;
+ });
+ document.getElementById('list').innerHTML=html;
+}).catch(e=>{ document.getElementById('status').innerText='Error: '+e });
 </script>
-</body>
-</html>
+</body></html>
