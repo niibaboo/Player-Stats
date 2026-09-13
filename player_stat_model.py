@@ -9,7 +9,7 @@ USE_ROLLING_FORM = False # False = 80 calls, True = 1000+ calls but more accurat
 MIN_AVG_MINUTES = 45
 BASE_URL = "https://api.thestatsapi.com/api/football"
 
-OUTPUT_JSON = Path(__file__).parent / "player_stats_data.json"
+OUTPUT_JSON = Path(__file__).parent /"docs"/ "player_stats_data.json"
 # If using GitHub Pages, change to: Path(__file__).parent / "docs" / "player_stats_data.json"
 
 CACHE_DIR = Path(__file__).parent / "cache"
