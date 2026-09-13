@@ -1,253 +1,130 @@
-"""
-Player Stat Model V5.2 LITE - Fixed squad endpoint + quota saver
-"""
-import os
-import json
-import time
-import math
-import hashlib
+import os, json, time, math, hashlib
 from datetime import date
 from pathlib import Path
 import requests
 
+# --- CONFIG YOU EDIT ---
 API_KEY = os.environ.get("THESTATSAPI_KEY", "PASTE_YOUR_KEY_HERE")
+USE_ROLLING_FORM = False # False = 80 calls, True = 1000+ calls but more accurate
+MIN_AVG_MINUTES = 45
 BASE_URL = "https://api.thestatsapi.com/api/football"
+
+OUTPUT_JSON = Path(__file__).parent / "player_stats_data.json"
+# If using GitHub Pages, change to: Path(__file__).parent / "docs" / "player_stats_data.json"
 
 CACHE_DIR = Path(__file__).parent / "cache"
 CACHE_DIR.mkdir(exist_ok=True)
-OUTPUT_JSON = Path(__file__).parent / "docs" / "player_stats_data.json"
 OUTPUT_JSON.parent.mkdir(exist_ok=True)
 
-WATCHLIST = ["Arsenal FC", "Manchester City"] # start with 2 to save quota
-MIN_AVG_MINUTES = 30 # skip bench - saves 40% calls
-
-CRITERIA_THRESHOLDS = {
-    "shots_over_1.5": 0.10,
-    "sot_over_0.5": 0.10,
-    "to_be_carded": 0.05,
-    "goal_or_assist": 0.10,
-}
-
-TOP_N_PER_MARKET = 5
+CRITERIA_THRESHOLDS = {"shots_over_1.5":0.65,"sot_over_0.5":0.60,"to_be_carded":0.30,"goal_or_assist":0.55}
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
-def _cache_path(key: str) -> Path:
-    h = hashlib.sha256(key.encode()).hexdigest()[:20]
-    return CACHE_DIR / f"{h}.json"
+# --- API + CACHE ---
+def _cache_path(k): return CACHE_DIR / f"{hashlib.sha256(k.encode()).hexdigest()[:20]}.json"
+def cached_get(path, params=None, ttl_hours=24):
+    key = path + json.dumps(params or {}, sort_keys=True)
+    cfile = _cache_path(key)
+    if cfile.exists() and (time.time() - cfile.stat().st_mtime)/3600 < ttl_hours:
+        return json.loads(cfile.read_text())
+    r = requests.get(f"{BASE_URL}{path}", headers=HEADERS, params=params, timeout=20)
+    r.raise_for_status()
+    data = r.json()
+    cfile.write_text(json.dumps(data))
+    time.sleep(0.35)
+    return data
 
-def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> dict:
-    cache_key = path + json.dumps(params or {}, sort_keys=True)
-    cfile = _cache_path(cache_key)
-    if cfile.exists():
-        try:
-            return json.loads(cfile.read_text())
-        except:
-            pass
-    for attempt in range(3):
-        resp = requests.get(f"{BASE_URL}{path}", headers=HEADERS, params=params, timeout=25)
-        if resp.status_code == 429:
-            print(f" Rate limit, sleeping 20s...")
-            time.sleep(20)
-            continue
-        if resp.status_code == 404:
-            raise FileNotFoundError(f"404 for {path}")
-        try:
-            resp.raise_for_status()
-        except:
-            if attempt == 2:
-                raise
-            time.sleep(3)
-            continue
-        data = resp.json()
-        cfile.write_text(json.dumps(data))
-        time.sleep(2.2)
-        return data
-    raise Exception(f"Failed {path}")
+def get_todays_fixtures():
+    today = date.today().isoformat()
+    print(f"Fixtures for {today}")
+    d = cached_get("/matches", {"date_from":today,"date_to":today,"status":"scheduled","per_page":100}, ttl_hours=2)
+    matches = d.get("data", d.get("matches", []))
+    print(f"Found {len(matches)} fixtures")
+    return matches
 
-def search_team(name: str) -> dict:
-    print(f" Searching team '{name}'...")
-    data = cached_get("/teams", {"search": name}, ttl_hours=24 * 30)
-    results = data.get("data", data.get("teams", []))
-    # filter out women and pick exact match
-    mens = [t for t in results if "women" not in t.get("name","").lower()]
-    if mens:
-        # prefer exact name match
-        for t in mens:
-            if name.lower() in t.get("name","").lower():
-                print(f" Found: {t.get('name')} id={t.get('id')}")
-                return t
-        return mens[0]
-    if results:
-        return results[0]
-    raise ValueError(f"No team for '{name}' - got {len(results)} results")
+def get_team_squad(tid):
+    d=cached_get(f"/teams/{tid}/players", ttl_hours=24*7)
+    return d.get("data", d.get("players", []))
+def get_player_profile(pid): return cached_get(f"/players/{pid}", ttl_hours=24)
+def get_team_recent_matches(tid, lim=5):
+    d=cached_get(f"/teams/{tid}/matches", {"status":"finished","per_page":lim,"order":"desc"}, ttl_hours=12)
+    return d.get("data", d.get("matches", []))[:lim]
+def get_match_player_stats(mid,pid):
+    try:
+        d=cached_get(f"/matches/{mid}/player-stats", ttl_hours=24*30)
+        for row in d.get("data", d.get("player_stats", [])):
+            if str(row.get("player_id"))==str(pid): return row
+    except: pass
+    return None
 
-def get_team_squad(team_id: str) -> list[dict]:
-    # FIXED: try multiple possible endpoints
-    for path in [f"/teams/{team_id}/squad", f"/teams/{team_id}/players", f"/teams/{team_id}"]:
-        try:
-            data = cached_get(path, ttl_hours=24*7)
-            # data can be list or dict
-            raw = data.get("data", data)
-            # case 1: data is team object with squad field
-            if isinstance(raw, dict):
-                if "squad" in raw and isinstance(raw["squad"], list):
-                    squad = raw["squad"]
-                elif "players" in raw and isinstance(raw["players"], list):
-                    squad = raw["players"]
-                else:
-                    squad = [raw] if "id" in raw else []
-            else:
-                squad = raw
+STAT_FIELDS={"shots":lambda r:r.get("shooting",{}).get("shots",r.get("shots",0)),"shots_on_target":lambda r:r.get("shooting",{}).get("shots_on_target",r.get("shots_on_target",0)),"cards":lambda r:r.get("discipline",{}).get("yellow_cards",0)+r.get("discipline",{}).get("red_cards",0),"goals":lambda r:r.get("shooting",{}).get("goals",r.get("goals",0)),"assists":lambda r:r.get("passing",{}).get("assists",r.get("assists",0))}
+def per90(tot,m): return tot*90/m if m>0 else 0.0
+def rolling_form(pid,tid):
+    if not USE_ROLLING_FORM: return {"matches_used":0,"minutes_played":0,"per90":{k:0 for k in STAT_FIELDS}}
+    totals={k:0.0 for k in STAT_FIELDS}; mins=0; used=0
+    for match in get_team_recent_matches(tid):
+        row=get_match_player_stats(match["id"],pid)
+        if not row: continue
+        m=row.get("minutes",0)
+        if m<=0: continue
+        mins+=m; used+=1
+        for k,fn in STAT_FIELDS.items():
+            try: totals[k]+=fn(row)
+            except: pass
+    return {"matches_used":used,"minutes_played":mins,"per90":{k:per90(totals[k],mins) for k in STAT_FIELDS}}
+def season_baseline(p):
+    s=p.get("season_stats", p.get("stats",{})); mins=s.get("minutes",0)
+    totals={"shots":s.get("shots",0),"shots_on_target":s.get("shots_on_target",0),"cards":s.get("yellow_cards",0)+s.get("red_cards",0),"goals":s.get("goals",0),"assists":s.get("assists",0)}
+    return {"minutes":mins,"per90":{k:per90(totals[k],mins) for k in STAT_FIELDS}}
+def blend(roll,seas):
+    out={}
+    for k in STAT_FIELDS:
+        r=roll["per90"].get(k,0); s=seas["per90"].get(k,0)
+        w=0 if roll["matches_used"]==0 else 0.25 if roll["matches_used"]<3 else 0.6
+        if not USE_ROLLING_FORM: w=0
+        val=w*r+(1-w)*s
+        if val==0 and s>0: val=s
+        out[k]=val
+    return out
+def poisson_pmf(k,lam): return math.exp(-lam)*lam**k/math.factorial(k) if lam>0 else (1.0 if k==0 else 0.0)
+def prob_over(lam,line): return 1-sum(poisson_pmf(k,lam) for k in range(math.floor(line)+1))
+def prob_at_least_one(lam): return 1-poisson_pmf(0,lam)
+def estimate_minutes(p):
+    s=p.get("season_stats", p.get("stats",{})); apps=s.get("appearances",0) or s.get("matches_played",0)
+    return s.get("minutes",0)/apps if apps>0 else 0
 
-            # flatten if grouped by position: [{"position":"GK","players":[...]},...]
-            if squad and isinstance(squad[0], dict) and "players" in squad[0]:
-                flat = []
-                for group in squad:
-                    flat.extend(group.get("players", []))
-                squad = flat
+if __name__=="__main__":
+    if API_KEY=="PASTE_YOUR_KEY_HERE": raise SystemExit("Set THESTATSAPI_KEY")
+    fixtures=get_todays_fixtures()
+    team_map={}
+    for m in fixtures:
+        for key in ["home_team","away_team"]:
+            t=m.get(key,{});
+            if t.get("id"): team_map[str(t["id"])]=t.get("name","")
+        if m.get("home_team_id"): team_map[str(m["home_team_id"])]=m.get("home_team_name","")
+        if m.get("away_team_id"): team_map[str(m["away_team_id"])]=m.get("away_team_name","")
 
-            if squad and len(squad) > 0:
-                print(f" Squad from {path}: {len(squad)} players")
-                return squad
-        except FileNotFoundError:
-            continue
-        except Exception as e:
-            print(f" try {path} failed: {e}")
-            continue
-    print(f" WARNING: No squad found for {team_id}")
-    return []
+    if not team_map: team_map={"Arsenal":"Arsenal","Manchester City":"Manchester City"}
 
-def get_player_profile(player_id: str) -> dict:
-    return cached_get(f"/players/{player_id}", ttl_hours=24*30)
-
-def per90(total: float, minutes: float) -> float:
-    return 0.0 if minutes <=0 else total * 90.0 / minutes
-
-def season_baseline(profile: dict) -> dict:
-    stats = profile.get("season_stats", profile.get("stats", {})) or {}
-    minutes = stats.get("minutes", 0) or stats.get("time_played",0) or 0
-    totals = {"shots": stats.get("shots",0), "shots_on_target": stats.get("shots_on_target",0), "cards": stats.get("yellow_cards",0)+stats.get("red_cards",0), "goals": stats.get("goals",0), "assists": stats.get("assists",0)}
-    per90_dict = {stat: per90(totals[stat], minutes if minutes>0 else 1) for stat in totals}
-    if minutes == 0 or sum(totals.values()) == 0:
-        per90_dict = {"shots": 1.5, "shots_on_target": 0.6, "cards": 0.25, "goals": 0.25, "assists": 0.15}
-        minutes = 600
-    return {"minutes": minutes, "per90": per90_dict}
-
-def poisson_pmf(k: int, lam: float) -> float:
-    if lam <=0:
-        return 1.0 if k==0 else 0.0
-    return math.exp(-lam)*lam**k/math.factorial(k)
-
-def prob_over(lam: float, line: float) -> float:
-    threshold = math.floor(line)+1
-    return 1 - sum(poisson_pmf(k, lam) for k in range(threshold))
-
-def prob_at_least_one(lam: float) -> float:
-    return 1 - poisson_pmf(0, lam)
-
-def estimate_expected_minutes(profile: dict) -> float:
-    stats = profile.get("season_stats", profile.get("stats", {})) or {}
-    minutes = stats.get("minutes", 0) or 0
-    apps = stats.get("appearances",0) or stats.get("matches_played",0) or 0
-    if minutes and apps:
-        return minutes / apps
-    return 75.0 if apps >=5 else 45.0
-
-def build_report(player: dict, profile: dict, team_id: str, team_name: str, expected_minutes: float) -> dict:
-    season = season_baseline(profile)
-    blended = season["per90"]
-    projected = {stat: rate * expected_minutes / 90.0 for stat, rate in blended.items()}
-    return {
-        "player_id": player["id"],
-        "player_name": player.get("name","Unknown"),
-        "team_id": team_id,
-        "team_name": team_name,
-        "expected_minutes": round(expected_minutes,1),
-        "projected_per_match": projected,
-        "props": {
-            "shots_over_1.5": round(prob_over(projected["shots"],1.5),3),
-            "sot_over_0.5": round(prob_over(projected["shots_on_target"],0.5),3),
-            "to_be_carded": round(prob_at_least_one(projected["cards"]),3),
-            "goal_or_assist": round(prob_at_least_one(projected["goals"]+projected["assists"]),3)
-        }
-    }
-
-def scan_team(team_id: str, team_name: str, min_avg_minutes: float = MIN_AVG_MINUTES) -> list[dict]:
-    squad = get_team_squad(team_id)
-    if not squad:
-        print(f" No squad for {team_name} ({team_id}) - skipping")
-        return []
-    print(f" Squad {team_name}: {len(squad)} players")
-    reports=[]
-    for player in squad:
-        player["team_name"] = team_name
-        try:
-            profile = get_player_profile(player["id"])
-        except Exception:
-            continue
-        avg_minutes = estimate_expected_minutes(profile)
-        if avg_minutes < min_avg_minutes:
-            continue
-        try:
-            report = build_report(player, profile, team_id, team_name, expected_minutes=min(avg_minutes,90))
-        except:
-            continue
-        reports.append(report)
-    return reports
-
-def run_watchlist_scan(team_names: list[str] = WATCHLIST) -> list[dict]:
     all_reports=[]
-    for name in team_names:
+    for tid,tname in team_map.items():
+        print(f"\nScanning {tname}...")
         try:
-            team = search_team(name)
-        except Exception as exc:
-            print(f" Skip '{name}': {exc}")
-            continue
-        all_reports.extend(scan_team(team["id"], team.get("name", name)))
-    return all_reports
+            squad=get_team_squad(tid)
+            for player in squad:
+                try: profile=get_player_profile(player["id"])
+                except: continue
+                avg=estimate_minutes(profile)
+                if avg<MIN_AVG_MINUTES: continue
+                roll=rolling_form(player["id"], tid)
+                seas=season_baseline(profile)
+                blended=blend(roll,seas)
+                proj={k:v*min(avg,90)/90 for k,v in blended.items()}
+                rep={"player_id":player["id"],"player_name":player.get("name","Unknown"),"team_id":tid,"team_name":tname,"expected_minutes":round(min(avg,90),1),"rolling_matches_used":roll["matches_used"],"projected_per_match":proj,"props":{"shots_over_1.5":round(prob_over(proj["shots"],1.5),3),"shots_over_2.5":round(prob_over(proj["shots"],2.5),3),"sot_over_0.5":round(prob_over(proj["shots_on_target"],0.5),3),"sot_over_1.5":round(prob_over(proj["shots_on_target"],1.5),3),"to_be_carded":round(prob_at_least_one(proj["cards"]),3),"to_score":round(prob_at_least_one(proj["goals"]),3),"to_assist":round(prob_at_least_one(proj["assists"]),3),"goal_or_assist":round(prob_at_least_one(proj["goals"]+proj["assists"]),3)}}
+                hits=[p for p,th in CRITERIA_THRESHOLDS.items() if rep["props"].get(p,0)>=th]
+                if hits: rep["criteria_hit"]=hits
+                all_reports.append(rep)
+        except Exception as e: print(f"fail {tname}: {e}")
 
-def apply_criteria(reports: list[dict], thresholds: dict = CRITERIA_THRESHOLDS) -> list[dict]:
-    qualifying=[]
-    for report in reports:
-        hits=[prop for prop, thr in thresholds.items() if report["props"].get(prop,0)>=thr]
-        if hits:
-            report["criteria_hit"]=hits
-            qualifying.append(report)
-    qualifying.sort(key=lambda r: max(r["props"][p] for p in r["criteria_hit"]), reverse=True)
-    return qualifying
-
-def top_n_by_market(reports: list[dict], top_n: int = TOP_N_PER_MARKET) -> dict:
-    if not reports: return {}
-    markets = reports[0]["props"].keys()
-    return {m: sorted(reports, key=lambda r: r["props"].get(m,0), reverse=True)[:top_n] for m in markets}
-
-def _load_output() -> dict:
-    if OUTPUT_JSON.exists():
-        try: return json.loads(OUTPUT_JSON.read_text())
-        except: return {}
-    return {}
-
-def save_scan(reports: list[dict], qualifying: list[dict], ranked: dict) -> None:
-    data=_load_output()
-    data["players"]={}
-    for report in reports:
-        data["players"][report["player_name"]]=report
-    data["screener"]={"generated_at": date.today().isoformat(), "qualifying": [r["player_name"] for r in qualifying], "top_by_market": {m: [r["player_name"] for r in reps] for m, reps in ranked.items()}}
-    OUTPUT_JSON.write_text(json.dumps(data, indent=2))
-    print(f"Saved {len(reports)} reports to {OUTPUT_JSON}")
-
-def run_scan(reports: list[dict]) -> None:
-    if not reports:
-        save_scan([], [], {})
-        return
-    qualifying = apply_criteria(reports)
-    ranked = top_n_by_market(reports)
-    print(f"\n{len(reports)} scanned, {len(qualifying)} met threshold.\n")
-    save_scan(reports, qualifying, ranked)
-
-if __name__ == "__main__":
-    if API_KEY == "PASTE_YOUR_KEY_HERE":
-        print("Set THESTATSAPI_KEY")
-        raise SystemExit(1)
-    print("Scanning teams:", WATCHLIST)
-    run_scan(run_watchlist_scan())
+    output={"generated_at":date.today().isoformat(),"total_players":len(all_reports),"teams":sorted(list(set(r["team_name"] for r in all_reports))),"players":{r["player_name"]:r for r in all_reports}}
+    OUTPUT_JSON.write_text(json.dumps(output, indent=2))
+    print(f"\nDONE: {len(all_reports)} players, {len(output['teams'])} teams -> {OUTPUT_JSON}")
