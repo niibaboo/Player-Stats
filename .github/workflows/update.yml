@@ -1,0 +1,16 @@
+name: Update Player Stats
+on: workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python player_stat_model.py
+      - run: |
+          git config user.name "bot"
+          git config user.email "bot@bot.com"
+          git add docs/player_stats_data.json
+          git commit -m "free model no api" || true
+          git push
