@@ -30,10 +30,10 @@ WATCHLIST = ["Arsenal"]
 MIN_AVG_MINUTES = 0
 
 CRITERIA_THRESHOLDS = {
-    "shots_over_1.5": 0.65,
-    "sot_over_0.5": 0.60,
-    "to_be_carded": 0.30,
-    "goal_or_assist": 0.55,
+    "shots_over_1.5": 0.35,
+    "sot_over_0.5": 0.20,
+    "to_be_carded": 0.20,
+    "goal_or_assist": 0.25,
 }
 
 TOP_N_PER_MARKET = 5
