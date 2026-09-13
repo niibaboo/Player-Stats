@@ -1,0 +1,30 @@
+name: Player Model
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 6 * * *' # daily 6:15am
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests pandas numpy
+      - name: Run model
+        run: python player_stat_model.py
+        env:
+          STATS_API_KEY: ${{ secrets.STATS_API_KEY }}
+      - name: Deploy to Pages
+        run: |
+          mkdir -p docs
+          cp player_stat_model.html docs/index.html
+          # if your .py also generates a json/data file, copy it too:
+          # cp players.json docs/ 2>/dev/null || true
+          git config user.name "bot"
+          git config user.email "bot@bot.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "player model build"
+          git push
