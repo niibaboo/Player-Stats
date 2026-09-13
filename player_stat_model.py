@@ -1,6 +1,5 @@
 """
-Player Stat Model V5 LITE - FINAL LIVE VERSION
-Fixes: docs/ path, 0-stats fallback, ultra-low thresholds
+Player Stat Model V5 LITE - WITH TEAM FILTER SUPPORT
 """
 
 import os
@@ -11,7 +10,6 @@ import hashlib
 import sys
 from datetime import date, timedelta
 from pathlib import Path
-
 import requests
 
 API_KEY = os.environ.get("THESTATSAPI_KEY", "PASTE_YOUR_KEY_HERE")
@@ -26,10 +24,9 @@ ROLLING_WEIGHT = 0.6
 ROLLING_MATCHES = 3
 USE_ROLLING = False
 
-WATCHLIST = ["Arsenal"]
+WATCHLIST = ["Arsenal FC", "Manchester City", "Liverpool", "Chelsea", "Manchester United"]
 MIN_AVG_MINUTES = 0
 
-# ULTRA LOW so you see players today (new season = low stats)
 CRITERIA_THRESHOLDS = {
     "shots_over_1.5": 0.10,
     "sot_over_0.5": 0.10,
@@ -55,14 +52,11 @@ def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> di
     for attempt in range(3):
         resp = requests.get(f"{BASE_URL}{path}", headers=HEADERS, params=params, timeout=25)
         if resp.status_code == 429:
-            print(f" 429 on {path}, waiting 20s...")
             time.sleep(20)
             continue
-        if resp.status_code == 400:
-            print(f" 400 on {path} {params} -> {resp.text[:300]}")
         try:
             resp.raise_for_status()
-        except Exception as e:
+        except:
             if attempt == 2:
                 raise
             time.sleep(5)
@@ -71,14 +65,27 @@ def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> di
         cfile.write_text(json.dumps(data))
         time.sleep(2.2)
         return data
-    raise Exception(f"Rate limit giving up on {path}")
+    raise Exception(f"Failed {path}")
 
-def search_player(name: str) -> dict:
-    data = cached_get("/players", {"search": name}, ttl_hours=24 * 7)
-    results = data.get("data", data.get("players", []))
+def search_team(name: str) -> dict:
+    data = cached_get("/teams", {"search": name}, ttl_hours=24 * 30)
+    results = data.get("data", data.get("teams", []))
     if not results:
-        raise ValueError(f"No player found for '{name}'")
+        all_teams = cached_get("/teams", {"per_page": 100}, ttl_hours=24*30)
+        all_results = all_teams.get("data", all_teams.get("teams", []))
+        for t in all_results:
+            if name.lower() in t.get("name","").lower() and "women" not in t.get("name","").lower():
+                return t
+        raise ValueError(f"No team for '{name}'")
+    # prefer men's team
+    for t in results:
+        if "women" not in t.get("name","").lower():
+            return t
     return results[0]
+
+def get_team_squad(team_id: str) -> list[dict]:
+    data = cached_get(f"/teams/{team_id}/players", ttl_hours=24 * 7)
+    return data.get("data", data.get("players", []))
 
 def get_player_profile(player_id: str) -> dict:
     return cached_get(f"/players/{player_id}", ttl_hours=24*30)
@@ -97,28 +104,6 @@ def get_match_player_stats(match_id: str, player_id: str) -> dict | None:
         if str(row.get("player_id")) == str(player_id):
             return row
     return None
-
-def search_team(name: str) -> dict:
-    data = cached_get("/teams", {"search": name}, ttl_hours=24 * 30)
-    results = data.get("data", data.get("teams", []))
-    if not results:
-        print(f" Trying full team list for '{name}'...")
-        all_teams = cached_get("/teams", {"per_page": 100}, ttl_hours=24*30)
-        all_results = all_teams.get("data", all_teams.get("teams", []))
-        for t in all_results:
-            if name.lower() in t.get("name","").lower():
-                return t
-        raise ValueError(f"No team found for '{name}'")
-    return results[0]
-
-def get_team_squad(team_id: str) -> list[dict]:
-    data = cached_get(f"/teams/{team_id}/players", ttl_hours=24 * 7)
-    return data.get("data", data.get("players", []))
-
-def get_upcoming_matches(competition_id: str, days_ahead: int = 7) -> list[dict]:
-    today = date.today()
-    data = cached_get("/matches", {"competition_id": competition_id, "date_from": today.isoformat(), "date_to": (today + timedelta(days=days_ahead)).isoformat(), "status": "scheduled", "per_page": 100}, ttl_hours=6)
-    return data.get("data", data.get("matches", []))
 
 STAT_FIELDS = {
     "shots": lambda row: row.get("shooting", {}).get("shots", 0),
@@ -154,7 +139,6 @@ def season_baseline(profile: dict) -> dict:
     minutes = stats.get("minutes", 0) or stats.get("time_played",0) or 0
     totals = {"shots": stats.get("shots",0), "shots_on_target": stats.get("shots_on_target",0), "cards": stats.get("yellow_cards",0)+stats.get("red_cards",0), "goals": stats.get("goals",0), "assists": stats.get("assists",0)}
     per90_dict = {stat: per90(totals[stat], minutes if minutes>0 else 1) for stat in STAT_FIELDS}
-    # FALLBACK FOR NEW SEASON WITH 0 STATS
     if minutes == 0 or sum(totals.values()) == 0:
         per90_dict = {"shots": 1.5, "shots_on_target": 0.6, "cards": 0.25, "goals": 0.25, "assists": 0.15}
         minutes = 600
@@ -193,34 +177,50 @@ def estimate_expected_minutes(profile: dict) -> float:
         return 45.0
     return 70.0
 
-def build_report(player: dict, profile: dict, team_id: str, expected_minutes: float) -> dict:
+def build_report(player: dict, profile: dict, team_id: str, team_name: str, expected_minutes: float) -> dict:
     player_id = player["id"]
     rolling = rolling_form(player_id, team_id)
     season = season_baseline(profile)
     blended_per90 = blend(rolling, season)
     projected = {stat: rate * expected_minutes / 90.0 for stat, rate in blended_per90.items()}
-    return {"player_id": player_id, "player_name": player.get("name","Unknown"), "team_id": team_id, "expected_minutes": round(expected_minutes,1), "rolling_matches_used": rolling["matches_used"], "projected_per_match": projected, "props": {"shots_over_1.5": round(prob_over(projected["shots"],1.5),3), "shots_over_2.5": round(prob_over(projected["shots"],2.5),3), "sot_over_0.5": round(prob_over(projected["shots_on_target"],0.5),3), "sot_over_1.5": round(prob_over(projected["shots_on_target"],1.5),3), "to_be_carded": round(prob_at_least_one(projected["cards"]),3), "to_score": round(prob_at_least_one(projected["goals"]),3), "to_assist": round(prob_at_least_one(projected["assists"]),3), "goal_or_assist": round(prob_at_least_one(projected["goals"]+projected["assists"]),3)}}
+    return {
+        "player_id": player_id,
+        "player_name": player.get("name","Unknown"),
+        "team_id": team_id,
+        "team_name": team_name,
+        "expected_minutes": round(expected_minutes,1),
+        "rolling_matches_used": rolling["matches_used"],
+        "projected_per_match": projected,
+        "props": {
+            "shots_over_1.5": round(prob_over(projected["shots"],1.5),3),
+            "shots_over_2.5": round(prob_over(projected["shots"],2.5),3),
+            "sot_over_0.5": round(prob_over(projected["shots_on_target"],0.5),3),
+            "sot_over_1.5": round(prob_over(projected["shots_on_target"],1.5),3),
+            "to_be_carded": round(prob_at_least_one(projected["cards"]),3),
+            "to_score": round(prob_at_least_one(projected["goals"]),3),
+            "to_assist": round(prob_at_least_one(projected["assists"]),3),
+            "goal_or_assist": round(prob_at_least_one(projected["goals"]+projected["assists"]),3)
+        }
+    }
 
-def scan_team(team_id: str, min_avg_minutes: float = MIN_AVG_MINUTES) -> list[dict]:
+def scan_team(team_id: str, team_name: str, min_avg_minutes: float = MIN_AVG_MINUTES) -> list[dict]:
     squad = get_team_squad(team_id)
-    print(f" Squad size: {len(squad)} players")
+    print(f" Squad {team_name}: {len(squad)} players")
     reports=[]
     for player in squad:
+        player["team_name"] = team_name
         try:
             profile = get_player_profile(player["id"])
         except Exception as e:
-            print(f" Skip {player.get('name')}: {e}")
             continue
         avg_minutes = estimate_expected_minutes(profile)
         if avg_minutes < min_avg_minutes:
             continue
         try:
-            report = build_report(player, profile, team_id, expected_minutes=min(avg_minutes,90))
-        except Exception as e:
-            print(f" Skip build {player.get('name')}: {e}")
+            report = build_report(player, profile, team_id, team_name, expected_minutes=min(avg_minutes,90))
+        except:
             continue
         reports.append(report)
-    print(f" -> {len(reports)} starters after filter (min {min_avg_minutes} mins)")
     return reports
 
 def run_watchlist_scan(team_names: list[str] = WATCHLIST) -> list[dict]:
@@ -229,10 +229,10 @@ def run_watchlist_scan(team_names: list[str] = WATCHLIST) -> list[dict]:
         try:
             team = search_team(name)
         except Exception as exc:
-            print(f" Skipping '{name}': {exc}")
+            print(f" Skip '{name}': {exc}")
             continue
         print(f"Scanning {team.get('name',name)}... id={team['id']}")
-        all_reports.extend(scan_team(team["id"]))
+        all_reports.extend(scan_team(team["id"], team.get("name", name)))
     return all_reports
 
 def apply_criteria(reports: list[dict], thresholds: dict = CRITERIA_THRESHOLDS) -> list[dict]:
@@ -265,20 +265,21 @@ def _load_output() -> dict:
 def save_scan(reports: list[dict], qualifying: list[dict], ranked: dict) -> None:
     data=_load_output()
     data.setdefault("players",{})
+    # clear old to avoid women/men mix
+    data["players"]={}
     for report in reports:
         data["players"][report["player_name"]]=report
     data["screener"]={"generated_at": date.today().isoformat(), "qualifying": [r["player_name"] for r in qualifying], "top_by_market": {market: [r["player_name"] for r in reps] for market, reps in ranked.items()}}
     OUTPUT_JSON.write_text(json.dumps(data, indent=2))
-    print(f"Saved {len(reports)} player reports + screener to {OUTPUT_JSON}")
+    print(f"Saved {len(reports)} reports to {OUTPUT_JSON}")
 
 def run_scan(reports: list[dict]) -> None:
     if not reports:
-        print("No qualifying players found - saving empty to keep Pages alive")
         save_scan([], [], {})
         return
     qualifying = apply_criteria(reports)
     ranked = top_n_by_market(reports)
-    print(f"\n{len(reports)} players scanned, {len(qualifying)} met a threshold.\n")
+    print(f"\n{len(reports)} scanned, {len(qualifying)} met threshold.\n")
     for r in qualifying[:10]:
         hits=", ".join(f"{p} ({r['props'][p]*100:.0f}%)" for p in r["criteria_hit"])
         print(f" {r['player_name']:<24} {hits}")
@@ -286,7 +287,7 @@ def run_scan(reports: list[dict]) -> None:
 
 if __name__ == "__main__":
     if API_KEY == "PASTE_YOUR_KEY_HERE":
-        print("Set THESTATSAPI_KEY env var")
+        print("Set THESTATSAPI_KEY")
         raise SystemExit(1)
-    print("CI detected - auto-running watchlist scan (mode 2)")
+    print("CI detected - scanning 5 teams")
     run_scan(run_watchlist_scan())
