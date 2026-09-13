@@ -1,21 +1,29 @@
 <!doctype html>
-<html><head><meta name=viewport content="width=device-width,initial-scale=1"><title>Stats</title>
-<style>body{background:#0f1a2a;color:#fff;font-family:sans-serif;padding:16px}.card{background:#14233a;padding:12px;margin:8px 0;border-radius:8px}</style>
-</head><body>
-<h2 id=s>LOADING</h2><div id=l></div>
+<html><head><meta name=viewport content="width=device-width,initial-scale=1"><title>Player Stats</title>
+<style>
+body{background:#0f1a2a;color:#fff;font-family:-apple-system,sans-serif;padding:16px;margin:0}
+.card{background:#14233a;padding:14px;margin:10px 0;border-radius:12px;border:1px solid #1e3a5a}
+.badge{background:#1e4a7a;padding:2px 8px;border-radius:6px;font-size:12px}
+</style></head><body>
+<h2 style="text-align:center">⚽ 26 Players - FIXED ✅</h2>
+<div id=list>Loading...</div>
 <script>
-document.getElementById('s').innerText='FETCHING';
 fetch('https://niibaboo.github.io/Player-Stats/player_stats_data.json?'+Date.now())
-.then(function(r){document.getElementById('s').innerText='STATUS '+r.status;return r.json()})
-.then(function(d){
- var players=Object.values(d.players||{});
- document.getElementById('s').innerText=players.length+' PLAYERS OK';
- var h='';
- players.sort(function(a,b){return (b.expected_minutes||0)-(a.expected_minutes||0)}).forEach(function(p){
-   var pr=p.props||{}; var ga=0; for(var k in pr){ if(k.indexOf('goal')>=0) ga=pr[k]; } if(!ga) ga=pr.goal_or_assist||0;
-   h+='<div class=card><b>'+p.player_name+'</b> - '+p.team_name+' ('+p.expected_minutes+'m)<br>Shots:'+Math.round((pr.shots_over_1_5||pr.shots_over_1||0)*100)+'% SOT:'+Math.round((pr.sot_over_0_5||0)*100)+'% GA:'+Math.round(ga*100)+'%</div>';
- });
- document.getElementById('l').innerHTML=h;
-}).catch(function(e){document.getElementById('s').innerText='FAIL '+e; document.getElementById('s').style.color='red'});
+.then(r=>r.json()).then(d=>{
+  const players=Object.values(d.players||{}).sort((a,b)=>(b.expected_minutes||0)-(a.expected_minutes||0));
+  let h='';
+  players.forEach(p=>{
+    const pr=p.props||{};
+    const s15 = pr['shots_over_1.5']||pr.shots_over_1_5||0;
+    const sot = pr['sot_over_0.5']||pr.sot_over_0_5||0;
+    let ga=0; for(let k in pr){ if(k.includes('goal')) ga=pr[k]; }
+    h+=`<div class=card><b>${p.player_name}</b> - ${p.team_name} <span class=badge>${p.expected_minutes}m</span><br>
+    <span style="color:#8ab4ff">Over 1.5 Shots: ${Math.round(s15*100)}%</span> |
+    SOT 0.5: ${Math.round(sot*100)}% |
+    G/A: ${Math.round(ga*100)}%<br>
+    <small>Pos: ${p.position} | Criteria: ${(p.criteria_hit||[]).join(', ')}</small></div>`;
+  });
+  document.getElementById('list').innerHTML=h;
+});
 </script>
 </body></html>
