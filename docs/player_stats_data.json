@@ -1,741 +1,3950 @@
 {
+  "generated_at": "2026-09-13",
+  "total_players": 171,
+  "teams": [
+    "Arsenal",
+    "Bournemouth",
+    "Chelsea",
+    "Liverpool",
+    "Man United",
+    "Manchester City",
+    "Newcastle",
+    "Tottenham"
+  ],
   "players": {
-    "Abdukodir Khusanov": {
-      "player_id": "pl_58886893",
-      "player_name": "Abdukodir Khusanov",
-      "team_id": "tm_3039",
+    "Erling Haaland": {
+      "player_id": "erling_haaland",
+      "player_name": "Erling Haaland",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 84,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 3.547,
+        "sot": 1.493,
+        "goals": 0.793,
+        "assists": 0.14,
+        "cards": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Allan": {
-      "player_id": "pl_73916340",
-      "player_name": "Allan",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.869,
+        "sot_over_0.5": 0.775,
+        "to_be_carded": 0.072,
+        "goal_or_assist": 0.607,
+        "to_score": 0.548
+      }
     },
     "Antoine Semenyo": {
-      "player_id": "pl_08952918",
+      "player_id": "antoine_semenyo",
       "player_name": "Antoine Semenyo",
-      "team_id": "tm_3039",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 81,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 2.79,
+        "sot": 1.08,
+        "goals": 0.378,
+        "assists": 0.198,
+        "cards": 0.162
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Ayyoub Bouaddi": {
-      "player_id": "pl_19105688",
-      "player_name": "Ayyoub Bouaddi",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Elliot Anderson": {
-      "player_id": "pl_61009241",
-      "player_name": "Elliot Anderson",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Enzo Fern\u00e1ndez": {
-      "player_id": "pl_45277146",
-      "player_name": "Enzo Fern\u00e1ndez",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Erling Haaland": {
-      "player_id": "pl_61928103",
-      "player_name": "Erling Haaland",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Floyd Samba": {
-      "player_id": "pl_15685564",
-      "player_name": "Floyd Samba",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Ger\u00f3nimo Rulli": {
-      "player_id": "pl_5874659",
-      "player_name": "Ger\u00f3nimo Rulli",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Gianluigi Donnarumma": {
-      "player_id": "pl_72970122",
-      "player_name": "Gianluigi Donnarumma",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Iliman Ndiaye": {
-      "player_id": "pl_72093207",
-      "player_name": "Iliman Ndiaye",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Josh Wilson-Esbrand": {
-      "player_id": "pl_45405021",
-      "player_name": "Josh Wilson-Esbrand",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Jo\u0161ko Gvardiol": {
-      "player_id": "pl_08527943",
-      "player_name": "Jo\u0161ko Gvardiol",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "J\u00e9r\u00e9my Doku": {
-      "player_id": "pl_61504595",
-      "player_name": "J\u00e9r\u00e9my Doku",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Marc Gu\u00e9hi": {
-      "player_id": "pl_08355220",
-      "player_name": "Marc Gu\u00e9hi",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Marcus Bettinelli": {
-      "player_id": "pl_5218565",
-      "player_name": "Marcus Bettinelli",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Mateo Kova\u010di\u0107": {
-      "player_id": "pl_1998084",
-      "player_name": "Mateo Kova\u010di\u0107",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Matheus Nunes": {
-      "player_id": "pl_96300162",
-      "player_name": "Matheus Nunes",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Nico O'Reilly": {
-      "player_id": "pl_58717226",
-      "player_name": "Nico O'Reilly",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
-      "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
-      },
-      "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.767,
+        "sot_over_0.5": 0.66,
+        "to_be_carded": 0.15,
+        "goal_or_assist": 0.438,
+        "to_score": 0.315
+      }
     },
     "Phil Foden": {
-      "player_id": "pl_45889667",
+      "player_id": "phil_foden",
       "player_name": "Phil Foden",
-      "team_id": "tm_3039",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 79,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 2.282,
+        "sot": 0.834,
+        "goals": 0.246,
+        "assists": 0.281,
+        "cards": 0.105
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.665,
+        "sot_over_0.5": 0.566,
+        "to_be_carded": 0.1,
+        "goal_or_assist": 0.409,
+        "to_score": 0.218
+      }
     },
-    "Rayan A\u00eft-Nouri": {
-      "player_id": "pl_84668539",
-      "player_name": "Rayan A\u00eft-Nouri",
-      "team_id": "tm_3039",
+    "Jeremy Doku": {
+      "player_id": "jeremy_doku",
+      "player_name": "Jeremy Doku",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 74,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 2.384,
+        "sot": 0.863,
+        "goals": 0.206,
+        "assists": 0.288,
+        "cards": 0.123
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
+        "shots_over_1.5": 0.688,
+        "sot_over_0.5": 0.578,
+        "to_be_carded": 0.116,
+        "goal_or_assist": 0.389,
+        "to_score": 0.186
+      }
+    },
+    "Savinho": {
+      "player_id": "savinho",
+      "player_name": "Savinho",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 71,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.893,
+        "sot": 0.592,
+        "goals": 0.142,
+        "assists": 0.221,
+        "cards": 0.11
       },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+      "props": {
+        "shots_over_1.5": 0.564,
+        "sot_over_0.5": 0.447,
+        "to_be_carded": 0.105,
+        "goal_or_assist": 0.304,
+        "to_score": 0.132
+      }
     },
     "Rayan Cherki": {
-      "player_id": "pl_84703422",
+      "player_id": "rayan_cherki",
       "player_name": "Rayan Cherki",
-      "team_id": "tm_3039",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 1.587,
+        "sot": 0.491,
+        "goals": 0.113,
+        "assists": 0.287,
+        "cards": 0.076
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.471,
+        "sot_over_0.5": 0.388,
+        "to_be_carded": 0.073,
+        "goal_or_assist": 0.33,
+        "to_score": 0.107
+      }
     },
-    "Rico Lewis": {
-      "player_id": "pl_25955586",
-      "player_name": "Rico Lewis",
-      "team_id": "tm_3039",
+    "Bernardo Silva": {
+      "player_id": "bernardo_silva",
+      "player_name": "Bernardo Silva",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 83,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 1.291,
+        "sot": 0.415,
+        "goals": 0.111,
+        "assists": 0.231,
+        "cards": 0.203
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.37,
+        "sot_over_0.5": 0.34,
+        "to_be_carded": 0.184,
+        "goal_or_assist": 0.289,
+        "to_score": 0.105
+      }
     },
-    "Ryan McAidoo": {
-      "player_id": "pl_20020338",
-      "player_name": "Ryan McAidoo",
-      "team_id": "tm_3039",
+    "Rodri": {
+      "player_id": "rodri",
+      "player_name": "Rodri",
+      "team_id": "manchester_city",
       "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+      "expected_minutes": 88,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 1.076,
+        "sot": 0.293,
+        "goals": 0.078,
+        "assists": 0.176,
+        "cards": 0.342
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.292,
+        "sot_over_0.5": 0.254,
+        "to_be_carded": 0.29,
+        "goal_or_assist": 0.224,
+        "to_score": 0.075
+      }
     },
-    "R\u00faben Dias": {
-      "player_id": "pl_2707662",
-      "player_name": "R\u00faben Dias",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+    "Bukayo Saka": {
+      "player_id": "bukayo_saka",
+      "player_name": "Bukayo Saka",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 84,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 2.707,
+        "sot": 1.027,
+        "goals": 0.355,
+        "assists": 0.327,
+        "cards": 0.093
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+        "shots_over_1.5": 0.753,
+        "sot_over_0.5": 0.642,
+        "to_be_carded": 0.089,
+        "goal_or_assist": 0.494,
+        "to_score": 0.299
+      }
     },
-    "Vitor Reis": {
-      "player_id": "pl_19835045",
-      "player_name": "Vitor Reis",
-      "team_id": "tm_3039",
-      "team_name": "Manchester City",
-      "expected_minutes": 45.0,
+    "Declan Rice": {
+      "player_id": "declan_rice",
+      "player_name": "Declan Rice",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 88,
+      "season_minutes": 1800,
+      "matches_used": 20,
       "projected_per_match": {
-        "shots": 0.75,
-        "shots_on_target": 0.3,
-        "cards": 0.125,
-        "goals": 0.125,
-        "assists": 0.075
+        "shots": 1.173,
+        "sot": 0.293,
+        "goals": 0.078,
+        "assists": 0.147,
+        "cards": 0.313
       },
       "props": {
-        "shots_over_1.5": 0.173,
-        "sot_over_0.5": 0.259,
-        "to_be_carded": 0.118,
-        "goal_or_assist": 0.181
+        "shots_over_1.5": 0.328,
+        "sot_over_0.5": 0.254,
+        "to_be_carded": 0.269,
+        "goal_or_assist": 0.201,
+        "to_score": 0.075
+      }
+    },
+    "Kai Havertz": {
+      "player_id": "kai_havertz",
+      "player_name": "Kai Havertz",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 80,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.222,
+        "sot": 0.889,
+        "goals": 0.4,
+        "assists": 0.16,
+        "cards": 0.124
       },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
+      "props": {
+        "shots_over_1.5": 0.651,
+        "sot_over_0.5": 0.589,
+        "to_be_carded": 0.117,
+        "goal_or_assist": 0.429,
+        "to_score": 0.33
+      }
+    },
+    "Mohamed Salah": {
+      "player_id": "mohamed_salah",
+      "player_name": "Mohamed Salah",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.287,
+        "sot": 1.353,
+        "goals": 0.599,
+        "assists": 0.309,
+        "cards": 0.048
+      },
+      "props": {
+        "shots_over_1.5": 0.84,
+        "sot_over_0.5": 0.742,
+        "to_be_carded": 0.047,
+        "goal_or_assist": 0.597,
+        "to_score": 0.451
+      }
+    },
+    "Luis Diaz": {
+      "player_id": "luis_diaz",
+      "player_name": "Luis Diaz",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.427,
+        "sot": 0.867,
+        "goals": 0.303,
+        "assists": 0.173,
+        "cards": 0.156
+      },
+      "props": {
+        "shots_over_1.5": 0.697,
+        "sot_over_0.5": 0.58,
+        "to_be_carded": 0.144,
+        "goal_or_assist": 0.379,
+        "to_score": 0.262
+      }
+    },
+    "Darwin Nunez": {
+      "player_id": "darwin_nunez",
+      "player_name": "Darwin Nunez",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.311,
+        "sot": 0.831,
+        "goals": 0.289,
+        "assists": 0.108,
+        "cards": 0.202
+      },
+      "props": {
+        "shots_over_1.5": 0.672,
+        "sot_over_0.5": 0.564,
+        "to_be_carded": 0.183,
+        "goal_or_assist": 0.328,
+        "to_score": 0.251
+      }
+    },
+    "Cole Palmer": {
+      "player_id": "cole_palmer",
+      "player_name": "Cole Palmer",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.55,
+        "sot": 0.992,
+        "goals": 0.397,
+        "assists": 0.359,
+        "cards": 0.113
+      },
+      "props": {
+        "shots_over_1.5": 0.723,
+        "sot_over_0.5": 0.629,
+        "to_be_carded": 0.107,
+        "goal_or_assist": 0.53,
+        "to_score": 0.327
+      }
+    },
+    "Nicolas Jackson": {
+      "player_id": "nicolas_jackson",
+      "player_name": "Nicolas Jackson",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 76,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.449,
+        "sot": 0.844,
+        "goals": 0.321,
+        "assists": 0.101,
+        "cards": 0.253
+      },
+      "props": {
+        "shots_over_1.5": 0.702,
+        "sot_over_0.5": 0.57,
+        "to_be_carded": 0.224,
+        "goal_or_assist": 0.344,
+        "to_score": 0.274
+      }
+    },
+    "Bruno Fernandes": {
+      "player_id": "bruno_fernandes",
+      "player_name": "Bruno Fernandes",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.32,
+        "sot": 0.822,
+        "goals": 0.213,
+        "assists": 0.406,
+        "cards": 0.406
+      },
+      "props": {
+        "shots_over_1.5": 0.674,
+        "sot_over_0.5": 0.56,
+        "to_be_carded": 0.334,
+        "goal_or_assist": 0.461,
+        "to_score": 0.192
+      }
+    },
+    "Marcus Rashford": {
+      "player_id": "marcus_rashford",
+      "player_name": "Marcus Rashford",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.993,
+        "sot": 0.693,
+        "goals": 0.243,
+        "assists": 0.156,
+        "cards": 0.104
+      },
+      "props": {
+        "shots_over_1.5": 0.592,
+        "sot_over_0.5": 0.5,
+        "to_be_carded": 0.099,
+        "goal_or_assist": 0.329,
+        "to_score": 0.215
+      }
+    },
+    "Son Heung-min": {
+      "player_id": "son_heung-min",
+      "player_name": "Son Heung-min",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 83,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.398,
+        "sot": 0.922,
+        "goals": 0.35,
+        "assists": 0.231,
+        "cards": 0.074
+      },
+      "props": {
+        "shots_over_1.5": 0.691,
+        "sot_over_0.5": 0.602,
+        "to_be_carded": 0.071,
+        "goal_or_assist": 0.441,
+        "to_score": 0.296
+      }
+    },
+    "Dominic Solanke": {
+      "player_id": "dominic_solanke",
+      "player_name": "Dominic Solanke",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 82,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.46,
+        "sot": 0.957,
+        "goals": 0.364,
+        "assists": 0.091,
+        "cards": 0.109
+      },
+      "props": {
+        "shots_over_1.5": 0.704,
+        "sot_over_0.5": 0.616,
+        "to_be_carded": 0.104,
+        "goal_or_assist": 0.366,
+        "to_score": 0.305
+      }
+    },
+    "Alexander Isak": {
+      "player_id": "alexander_isak",
+      "player_name": "Alexander Isak",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 80,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.667,
+        "sot": 1.111,
+        "goals": 0.489,
+        "assists": 0.107,
+        "cards": 0.089
+      },
+      "props": {
+        "shots_over_1.5": 0.745,
+        "sot_over_0.5": 0.671,
+        "to_be_carded": 0.085,
+        "goal_or_assist": 0.449,
+        "to_score": 0.387
+      }
+    },
+    "Player 0": {
+      "player_id": "player_0",
+      "player_name": "Player 0",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 81,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.745,
+        "sot": 1.251,
+        "goals": 0.279,
+        "assists": 0.171,
+        "cards": 0.297
+      },
+      "props": {
+        "shots_over_1.5": 0.759,
+        "sot_over_0.5": 0.714,
+        "to_be_carded": 0.257,
+        "goal_or_assist": 0.362,
+        "to_score": 0.243
+      }
+    },
+    "Player 1": {
+      "player_id": "player_1",
+      "player_name": "Player 1",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.771,
+        "sot": 0.302,
+        "goals": 0.136,
+        "assists": 0.076,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.181,
+        "sot_over_0.5": 0.261,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.191,
+        "to_score": 0.127
+      }
+    },
+    "Player 2": {
+      "player_id": "player_2",
+      "player_name": "Player 2",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.352,
+        "sot": 1.671,
+        "goals": 0.396,
+        "assists": 0.247,
+        "cards": 0.396
+      },
+      "props": {
+        "shots_over_1.5": 0.848,
+        "sot_over_0.5": 0.812,
+        "to_be_carded": 0.327,
+        "goal_or_assist": 0.474,
+        "to_score": 0.327
+      }
+    },
+    "Player 3": {
+      "player_id": "player_3",
+      "player_name": "Player 3",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 61,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.563,
+        "sot": 0.203,
+        "goals": 0.075,
+        "assists": 0.041,
+        "cards": 0.108
+      },
+      "props": {
+        "shots_over_1.5": 0.11,
+        "sot_over_0.5": 0.184,
+        "to_be_carded": 0.103,
+        "goal_or_assist": 0.109,
+        "to_score": 0.072
+      }
+    },
+    "Player 4": {
+      "player_id": "player_4",
+      "player_name": "Player 4",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 73,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.949,
+        "sot": 0.397,
+        "goals": 0.195,
+        "assists": 0.114,
+        "cards": 0.219
+      },
+      "props": {
+        "shots_over_1.5": 0.245,
+        "sot_over_0.5": 0.328,
+        "to_be_carded": 0.197,
+        "goal_or_assist": 0.265,
+        "to_score": 0.177
+      }
+    },
+    "Player 5": {
+      "player_id": "player_5",
+      "player_name": "Player 5",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 84,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.968,
+        "sot": 1.409,
+        "goals": 0.327,
+        "assists": 0.196,
+        "cards": 0.327
+      },
+      "props": {
+        "shots_over_1.5": 0.796,
+        "sot_over_0.5": 0.756,
+        "to_be_carded": 0.279,
+        "goal_or_assist": 0.407,
+        "to_score": 0.279
+      }
+    },
+    "Player 6": {
+      "player_id": "player_6",
+      "player_name": "Player 6",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.041,
+        "sot": 1.454,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.807,
+        "sot_over_0.5": 0.766,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 7": {
+      "player_id": "player_7",
+      "player_name": "Player 7",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.63,
+        "sot": 0.231,
+        "goals": 0.098,
+        "assists": 0.056,
+        "cards": 0.126
+      },
+      "props": {
+        "shots_over_1.5": 0.132,
+        "sot_over_0.5": 0.206,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.143,
+        "to_score": 0.093
+      }
+    },
+    "Player 8": {
+      "player_id": "player_8",
+      "player_name": "Player 8",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 73,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.933,
+        "sot": 0.389,
+        "goals": 0.187,
+        "assists": 0.114,
+        "cards": 0.211
+      },
+      "props": {
+        "shots_over_1.5": 0.24,
+        "sot_over_0.5": 0.322,
+        "to_be_carded": 0.19,
+        "goal_or_assist": 0.259,
+        "to_score": 0.17
+      }
+    },
+    "Player 9": {
+      "player_id": "player_9",
+      "player_name": "Player 9",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 64,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.654,
+        "sot": 0.242,
+        "goals": 0.107,
+        "assists": 0.057,
+        "cards": 0.135
+      },
+      "props": {
+        "shots_over_1.5": 0.14,
+        "sot_over_0.5": 0.215,
+        "to_be_carded": 0.126,
+        "goal_or_assist": 0.151,
+        "to_score": 0.101
+      }
+    },
+    "Player 10": {
+      "player_id": "player_10",
+      "player_name": "Player 10",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.539,
+        "sot": 1.118,
+        "goals": 0.243,
+        "assists": 0.147,
+        "cards": 0.26
+      },
+      "props": {
+        "shots_over_1.5": 0.721,
+        "sot_over_0.5": 0.673,
+        "to_be_carded": 0.229,
+        "goal_or_assist": 0.323,
+        "to_score": 0.215
+      }
+    },
+    "Player 11": {
+      "player_id": "player_11",
+      "player_name": "Player 11",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.032,
+        "sot": 1.445,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.806,
+        "sot_over_0.5": 0.764,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 12": {
+      "player_id": "player_12",
+      "player_name": "Player 12",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.008,
+        "sot": 0.433,
+        "goals": 0.208,
+        "assists": 0.125,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.267,
+        "sot_over_0.5": 0.352,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.283,
+        "to_score": 0.188
+      }
+    },
+    "Player 13": {
+      "player_id": "player_13",
+      "player_name": "Player 13",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.209,
+        "sot": 1.566,
+        "goals": 0.367,
+        "assists": 0.232,
+        "cards": 0.367
+      },
+      "props": {
+        "shots_over_1.5": 0.83,
+        "sot_over_0.5": 0.791,
+        "to_be_carded": 0.307,
+        "goal_or_assist": 0.451,
+        "to_score": 0.307
+      }
+    },
+    "Player 14": {
+      "player_id": "player_14",
+      "player_name": "Player 14",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 88,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.276,
+        "sot": 1.623,
+        "goals": 0.381,
+        "assists": 0.235,
+        "cards": 0.381
+      },
+      "props": {
+        "shots_over_1.5": 0.838,
+        "sot_over_0.5": 0.803,
+        "to_be_carded": 0.317,
+        "goal_or_assist": 0.46,
+        "to_score": 0.317
+      }
+    },
+    "Player 15": {
+      "player_id": "player_15",
+      "player_name": "Player 15",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 61,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.563,
+        "sot": 0.203,
+        "goals": 0.075,
+        "assists": 0.041,
+        "cards": 0.108
+      },
+      "props": {
+        "shots_over_1.5": 0.11,
+        "sot_over_0.5": 0.184,
+        "to_be_carded": 0.103,
+        "goal_or_assist": 0.109,
+        "to_score": 0.072
+      }
+    },
+    "Player 16": {
+      "player_id": "player_16",
+      "player_name": "Player 16",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 64,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.654,
+        "sot": 0.242,
+        "goals": 0.107,
+        "assists": 0.057,
+        "cards": 0.135
+      },
+      "props": {
+        "shots_over_1.5": 0.14,
+        "sot_over_0.5": 0.215,
+        "to_be_carded": 0.126,
+        "goal_or_assist": 0.151,
+        "to_score": 0.101
+      }
+    },
+    "Player 17": {
+      "player_id": "player_17",
+      "player_name": "Player 17",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.805,
+        "sot": 0.322,
+        "goals": 0.146,
+        "assists": 0.084,
+        "cards": 0.176
+      },
+      "props": {
+        "shots_over_1.5": 0.193,
+        "sot_over_0.5": 0.275,
+        "to_be_carded": 0.162,
+        "goal_or_assist": 0.205,
+        "to_score": 0.136
+      }
+    },
+    "Player 18": {
+      "player_id": "player_18",
+      "player_name": "Player 18",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.912,
+        "sot": 0.376,
+        "goals": 0.184,
+        "assists": 0.112,
+        "cards": 0.208
+      },
+      "props": {
+        "shots_over_1.5": 0.232,
+        "sot_over_0.5": 0.313,
+        "to_be_carded": 0.188,
+        "goal_or_assist": 0.256,
+        "to_score": 0.168
+      }
+    },
+    "Player 19": {
+      "player_id": "player_19",
+      "player_name": "Player 19",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.008,
+        "sot": 0.433,
+        "goals": 0.208,
+        "assists": 0.125,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.267,
+        "sot_over_0.5": 0.352,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.283,
+        "to_score": 0.188
+      }
+    },
+    "Player 20": {
+      "player_id": "player_20",
+      "player_name": "Player 20",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 84,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.968,
+        "sot": 1.409,
+        "goals": 0.327,
+        "assists": 0.196,
+        "cards": 0.327
+      },
+      "props": {
+        "shots_over_1.5": 0.796,
+        "sot_over_0.5": 0.756,
+        "to_be_carded": 0.279,
+        "goal_or_assist": 0.407,
+        "to_score": 0.279
+      }
+    },
+    "Player 21": {
+      "player_id": "player_21",
+      "player_name": "Player 21",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.548,
+        "sot": 1.127,
+        "goals": 0.251,
+        "assists": 0.147,
+        "cards": 0.26
+      },
+      "props": {
+        "shots_over_1.5": 0.722,
+        "sot_over_0.5": 0.676,
+        "to_be_carded": 0.229,
+        "goal_or_assist": 0.329,
+        "to_score": 0.222
+      }
+    },
+    "Player 22": {
+      "player_id": "player_22",
+      "player_name": "Player 22",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 76,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.047,
+        "sot": 0.456,
+        "goals": 0.228,
+        "assists": 0.135,
+        "cards": 0.245
+      },
+      "props": {
+        "shots_over_1.5": 0.282,
+        "sot_over_0.5": 0.366,
+        "to_be_carded": 0.217,
+        "goal_or_assist": 0.304,
+        "to_score": 0.204
+      }
+    },
+    "Player 23": {
+      "player_id": "player_23",
+      "player_name": "Player 23",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 64,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.654,
+        "sot": 0.242,
+        "goals": 0.107,
+        "assists": 0.057,
+        "cards": 0.135
+      },
+      "props": {
+        "shots_over_1.5": 0.14,
+        "sot_over_0.5": 0.215,
+        "to_be_carded": 0.126,
+        "goal_or_assist": 0.151,
+        "to_score": 0.101
+      }
+    },
+    "Player 24": {
+      "player_id": "player_24",
+      "player_name": "Player 24",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 80,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.693,
+        "sot": 1.218,
+        "goals": 0.276,
+        "assists": 0.169,
+        "cards": 0.284
+      },
+      "props": {
+        "shots_over_1.5": 0.75,
+        "sot_over_0.5": 0.704,
+        "to_be_carded": 0.248,
+        "goal_or_assist": 0.359,
+        "to_score": 0.241
+      }
+    },
+    "Player 25": {
+      "player_id": "player_25",
+      "player_name": "Player 25",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.771,
+        "sot": 0.302,
+        "goals": 0.136,
+        "assists": 0.083,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.181,
+        "sot_over_0.5": 0.261,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.197,
+        "to_score": 0.127
+      }
+    },
+    "Player 26": {
+      "player_id": "player_26",
+      "player_name": "Player 26",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.63,
+        "sot": 0.231,
+        "goals": 0.098,
+        "assists": 0.056,
+        "cards": 0.126
+      },
+      "props": {
+        "shots_over_1.5": 0.132,
+        "sot_over_0.5": 0.206,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.143,
+        "to_score": 0.093
+      }
+    },
+    "Player 27": {
+      "player_id": "player_27",
+      "player_name": "Player 27",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.017,
+        "sot": 0.442,
+        "goals": 0.217,
+        "assists": 0.133,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.27,
+        "sot_over_0.5": 0.357,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.295,
+        "to_score": 0.195
+      }
+    },
+    "Player 28": {
+      "player_id": "player_28",
+      "player_name": "Player 28",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 86,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.125,
+        "sot": 1.51,
+        "goals": 0.354,
+        "assists": 0.22,
+        "cards": 0.354
+      },
+      "props": {
+        "shots_over_1.5": 0.819,
+        "sot_over_0.5": 0.779,
+        "to_be_carded": 0.298,
+        "goal_or_assist": 0.436,
+        "to_score": 0.298
+      }
+    },
+    "Player 29": {
+      "player_id": "player_29",
+      "player_name": "Player 29",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.565,
+        "sot": 1.135,
+        "goals": 0.251,
+        "assists": 0.156,
+        "cards": 0.269
+      },
+      "props": {
+        "shots_over_1.5": 0.726,
+        "sot_over_0.5": 0.679,
+        "to_be_carded": 0.236,
+        "goal_or_assist": 0.335,
+        "to_score": 0.222
+      }
+    },
+    "Player 30": {
+      "player_id": "player_30",
+      "player_name": "Player 30",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.017,
+        "sot": 0.433,
+        "goals": 0.217,
+        "assists": 0.125,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.27,
+        "sot_over_0.5": 0.352,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.289,
+        "to_score": 0.195
+      }
+    },
+    "Player 31": {
+      "player_id": "player_31",
+      "player_name": "Player 31",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.686,
+        "sot": 0.26,
+        "goals": 0.116,
+        "assists": 0.065,
+        "cards": 0.144
+      },
+      "props": {
+        "shots_over_1.5": 0.151,
+        "sot_over_0.5": 0.229,
+        "to_be_carded": 0.134,
+        "goal_or_assist": 0.165,
+        "to_score": 0.109
+      }
+    },
+    "Player 32": {
+      "player_id": "player_32",
+      "player_name": "Player 32",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 64,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.661,
+        "sot": 0.249,
+        "goals": 0.107,
+        "assists": 0.057,
+        "cards": 0.135
+      },
+      "props": {
+        "shots_over_1.5": 0.142,
+        "sot_over_0.5": 0.22,
+        "to_be_carded": 0.126,
+        "goal_or_assist": 0.151,
+        "to_score": 0.101
+      }
+    },
+    "Player 33": {
+      "player_id": "player_33",
+      "player_name": "Player 33",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 71,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.868,
+        "sot": 0.347,
+        "goals": 0.166,
+        "assists": 0.095,
+        "cards": 0.189
+      },
+      "props": {
+        "shots_over_1.5": 0.216,
+        "sot_over_0.5": 0.293,
+        "to_be_carded": 0.172,
+        "goal_or_assist": 0.229,
+        "to_score": 0.153
+      }
+    },
+    "Player 34": {
+      "player_id": "player_34",
+      "player_name": "Player 34",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 77,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.078,
+        "sot": 0.471,
+        "goals": 0.231,
+        "assists": 0.145,
+        "cards": 0.248
+      },
+      "props": {
+        "shots_over_1.5": 0.293,
+        "sot_over_0.5": 0.375,
+        "to_be_carded": 0.22,
+        "goal_or_assist": 0.314,
+        "to_score": 0.206
+      }
+    },
+    "Player 35": {
+      "player_id": "player_35",
+      "player_name": "Player 35",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.63,
+        "sot": 0.231,
+        "goals": 0.098,
+        "assists": 0.056,
+        "cards": 0.126
+      },
+      "props": {
+        "shots_over_1.5": 0.132,
+        "sot_over_0.5": 0.206,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.143,
+        "to_score": 0.093
+      }
+    },
+    "Player 36": {
+      "player_id": "player_36",
+      "player_name": "Player 36",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 73,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.949,
+        "sot": 0.397,
+        "goals": 0.195,
+        "assists": 0.114,
+        "cards": 0.219
+      },
+      "props": {
+        "shots_over_1.5": 0.245,
+        "sot_over_0.5": 0.328,
+        "to_be_carded": 0.197,
+        "goal_or_assist": 0.265,
+        "to_score": 0.177
+      }
+    },
+    "Player 37": {
+      "player_id": "player_37",
+      "player_name": "Player 37",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.771,
+        "sot": 0.302,
+        "goals": 0.136,
+        "assists": 0.083,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.181,
+        "sot_over_0.5": 0.261,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.197,
+        "to_score": 0.127
+      }
+    },
+    "Player 38": {
+      "player_id": "player_38",
+      "player_name": "Player 38",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.704,
+        "sot": 0.264,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.157,
+        "sot_over_0.5": 0.232,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 39": {
+      "player_id": "player_39",
+      "player_name": "Player 39",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.323,
+        "sot": 1.651,
+        "goals": 0.386,
+        "assists": 0.237,
+        "cards": 0.386
+      },
+      "props": {
+        "shots_over_1.5": 0.844,
+        "sot_over_0.5": 0.808,
+        "to_be_carded": 0.32,
+        "goal_or_assist": 0.464,
+        "to_score": 0.32
+      }
+    },
+    "Player 40": {
+      "player_id": "player_40",
+      "player_name": "Player 40",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.912,
+        "sot": 0.376,
+        "goals": 0.184,
+        "assists": 0.104,
+        "cards": 0.208
+      },
+      "props": {
+        "shots_over_1.5": 0.232,
+        "sot_over_0.5": 0.313,
+        "to_be_carded": 0.188,
+        "goal_or_assist": 0.25,
+        "to_score": 0.168
+      }
+    },
+    "Player 41": {
+      "player_id": "player_41",
+      "player_name": "Player 41",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 62,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.599,
+        "sot": 0.22,
+        "goals": 0.09,
+        "assists": 0.048,
+        "cards": 0.117
+      },
+      "props": {
+        "shots_over_1.5": 0.122,
+        "sot_over_0.5": 0.198,
+        "to_be_carded": 0.111,
+        "goal_or_assist": 0.129,
+        "to_score": 0.086
+      }
+    },
+    "Player 42": {
+      "player_id": "player_42",
+      "player_name": "Player 42",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 86,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.115,
+        "sot": 1.5,
+        "goals": 0.344,
+        "assists": 0.22,
+        "cards": 0.354
+      },
+      "props": {
+        "shots_over_1.5": 0.817,
+        "sot_over_0.5": 0.777,
+        "to_be_carded": 0.298,
+        "goal_or_assist": 0.431,
+        "to_score": 0.291
+      }
+    },
+    "Player 43": {
+      "player_id": "player_43",
+      "player_name": "Player 43",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 84,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.968,
+        "sot": 1.409,
+        "goals": 0.327,
+        "assists": 0.196,
+        "cards": 0.327
+      },
+      "props": {
+        "shots_over_1.5": 0.796,
+        "sot_over_0.5": 0.756,
+        "to_be_carded": 0.279,
+        "goal_or_assist": 0.407,
+        "to_score": 0.279
+      }
+    },
+    "Player 44": {
+      "player_id": "player_44",
+      "player_name": "Player 44",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 76,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.039,
+        "sot": 0.448,
+        "goals": 0.22,
+        "assists": 0.135,
+        "cards": 0.245
+      },
+      "props": {
+        "shots_over_1.5": 0.278,
+        "sot_over_0.5": 0.361,
+        "to_be_carded": 0.217,
+        "goal_or_assist": 0.299,
+        "to_score": 0.197
+      }
+    },
+    "Player 45": {
+      "player_id": "player_45",
+      "player_name": "Player 45",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.18,
+        "sot": 1.547,
+        "goals": 0.358,
+        "assists": 0.222,
+        "cards": 0.367
+      },
+      "props": {
+        "shots_over_1.5": 0.826,
+        "sot_over_0.5": 0.787,
+        "to_be_carded": 0.307,
+        "goal_or_assist": 0.44,
+        "to_score": 0.301
+      }
+    },
+    "Player 46": {
+      "player_id": "player_46",
+      "player_name": "Player 46",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 77,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.078,
+        "sot": 0.471,
+        "goals": 0.231,
+        "assists": 0.137,
+        "cards": 0.248
+      },
+      "props": {
+        "shots_over_1.5": 0.293,
+        "sot_over_0.5": 0.375,
+        "to_be_carded": 0.22,
+        "goal_or_assist": 0.308,
+        "to_score": 0.206
+      }
+    },
+    "Player 47": {
+      "player_id": "player_47",
+      "player_name": "Player 47",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.813,
+        "sot": 0.33,
+        "goals": 0.153,
+        "assists": 0.092,
+        "cards": 0.176
+      },
+      "props": {
+        "shots_over_1.5": 0.196,
+        "sot_over_0.5": 0.281,
+        "to_be_carded": 0.162,
+        "goal_or_assist": 0.218,
+        "to_score": 0.142
+      }
+    },
+    "Player 48": {
+      "player_id": "player_48",
+      "player_name": "Player 48",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.704,
+        "sot": 0.264,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.157,
+        "sot_over_0.5": 0.232,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 49": {
+      "player_id": "player_49",
+      "player_name": "Player 49",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.679,
+        "sot": 0.26,
+        "goals": 0.108,
+        "assists": 0.065,
+        "cards": 0.144
+      },
+      "props": {
+        "shots_over_1.5": 0.149,
+        "sot_over_0.5": 0.229,
+        "to_be_carded": 0.134,
+        "goal_or_assist": 0.159,
+        "to_score": 0.103
+      }
+    },
+    "Player 50": {
+      "player_id": "player_50",
+      "player_name": "Player 50",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.896,
+        "sot": 0.368,
+        "goals": 0.176,
+        "assists": 0.104,
+        "cards": 0.2
+      },
+      "props": {
+        "shots_over_1.5": 0.226,
+        "sot_over_0.5": 0.308,
+        "to_be_carded": 0.181,
+        "goal_or_assist": 0.244,
+        "to_score": 0.161
+      }
+    },
+    "Player 51": {
+      "player_id": "player_51",
+      "player_name": "Player 51",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 76,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.056,
+        "sot": 0.456,
+        "goals": 0.228,
+        "assists": 0.135,
+        "cards": 0.245
+      },
+      "props": {
+        "shots_over_1.5": 0.285,
+        "sot_over_0.5": 0.366,
+        "to_be_carded": 0.217,
+        "goal_or_assist": 0.304,
+        "to_score": 0.204
+      }
+    },
+    "Player 52": {
+      "player_id": "player_52",
+      "player_name": "Player 52",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.771,
+        "sot": 0.302,
+        "goals": 0.136,
+        "assists": 0.076,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.181,
+        "sot_over_0.5": 0.261,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.191,
+        "to_score": 0.127
+      }
+    },
+    "Player 53": {
+      "player_id": "player_53",
+      "player_name": "Player 53",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 79,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.607,
+        "sot": 1.159,
+        "goals": 0.255,
+        "assists": 0.158,
+        "cards": 0.272
+      },
+      "props": {
+        "shots_over_1.5": 0.734,
+        "sot_over_0.5": 0.686,
+        "to_be_carded": 0.238,
+        "goal_or_assist": 0.338,
+        "to_score": 0.225
+      }
+    },
+    "Player 54": {
+      "player_id": "player_54",
+      "player_name": "Player 54",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.041,
+        "sot": 1.454,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.807,
+        "sot_over_0.5": 0.766,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 55": {
+      "player_id": "player_55",
+      "player_name": "Player 55",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 82,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.834,
+        "sot": 1.312,
+        "goals": 0.301,
+        "assists": 0.182,
+        "cards": 0.31
+      },
+      "props": {
+        "shots_over_1.5": 0.775,
+        "sot_over_0.5": 0.731,
+        "to_be_carded": 0.266,
+        "goal_or_assist": 0.383,
+        "to_score": 0.26
+      }
+    },
+    "Player 56": {
+      "player_id": "player_56",
+      "player_name": "Player 56",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.711,
+        "sot": 0.271,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.16,
+        "sot_over_0.5": 0.238,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 57": {
+      "player_id": "player_57",
+      "player_name": "Player 57",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.18,
+        "sot": 1.547,
+        "goals": 0.358,
+        "assists": 0.222,
+        "cards": 0.367
+      },
+      "props": {
+        "shots_over_1.5": 0.826,
+        "sot_over_0.5": 0.787,
+        "to_be_carded": 0.307,
+        "goal_or_assist": 0.44,
+        "to_score": 0.301
+      }
+    },
+    "Player 58": {
+      "player_id": "player_58",
+      "player_name": "Player 58",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.711,
+        "sot": 0.271,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.16,
+        "sot_over_0.5": 0.238,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 59": {
+      "player_id": "player_59",
+      "player_name": "Player 59",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.711,
+        "sot": 0.271,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.16,
+        "sot_over_0.5": 0.238,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 60": {
+      "player_id": "player_60",
+      "player_name": "Player 60",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 61,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.563,
+        "sot": 0.203,
+        "goals": 0.075,
+        "assists": 0.041,
+        "cards": 0.108
+      },
+      "props": {
+        "shots_over_1.5": 0.11,
+        "sot_over_0.5": 0.184,
+        "to_be_carded": 0.103,
+        "goal_or_assist": 0.109,
+        "to_score": 0.072
+      }
+    },
+    "Player 61": {
+      "player_id": "player_61",
+      "player_name": "Player 61",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 77,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.087,
+        "sot": 0.479,
+        "goals": 0.24,
+        "assists": 0.145,
+        "cards": 0.257
+      },
+      "props": {
+        "shots_over_1.5": 0.296,
+        "sot_over_0.5": 0.381,
+        "to_be_carded": 0.226,
+        "goal_or_assist": 0.32,
+        "to_score": 0.213
+      }
+    },
+    "Player 62": {
+      "player_id": "player_62",
+      "player_name": "Player 62",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 74,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.97,
+        "sot": 0.403,
+        "goals": 0.197,
+        "assists": 0.115,
+        "cards": 0.222
+      },
+      "props": {
+        "shots_over_1.5": 0.253,
+        "sot_over_0.5": 0.332,
+        "to_be_carded": 0.199,
+        "goal_or_assist": 0.268,
+        "to_score": 0.179
+      }
+    },
+    "Player 63": {
+      "player_id": "player_63",
+      "player_name": "Player 63",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.719,
+        "sot": 0.271,
+        "goals": 0.125,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.162,
+        "sot_over_0.5": 0.238,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.174,
+        "to_score": 0.117
+      }
+    },
+    "Player 64": {
+      "player_id": "player_64",
+      "player_name": "Player 64",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 81,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.772,
+        "sot": 1.269,
+        "goals": 0.288,
+        "assists": 0.18,
+        "cards": 0.297
+      },
+      "props": {
+        "shots_over_1.5": 0.764,
+        "sot_over_0.5": 0.719,
+        "to_be_carded": 0.257,
+        "goal_or_assist": 0.374,
+        "to_score": 0.25
+      }
+    },
+    "Player 65": {
+      "player_id": "player_65",
+      "player_name": "Player 65",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.896,
+        "sot": 0.368,
+        "goals": 0.176,
+        "assists": 0.104,
+        "cards": 0.2
+      },
+      "props": {
+        "shots_over_1.5": 0.226,
+        "sot_over_0.5": 0.308,
+        "to_be_carded": 0.181,
+        "goal_or_assist": 0.244,
+        "to_score": 0.161
+      }
+    },
+    "Player 66": {
+      "player_id": "player_66",
+      "player_name": "Player 66",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.109,
+        "sot": 0.485,
+        "goals": 0.243,
+        "assists": 0.147,
+        "cards": 0.26
+      },
+      "props": {
+        "shots_over_1.5": 0.304,
+        "sot_over_0.5": 0.385,
+        "to_be_carded": 0.229,
+        "goal_or_assist": 0.323,
+        "to_score": 0.215
+      }
+    },
+    "Player 67": {
+      "player_id": "player_67",
+      "player_name": "Player 67",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.679,
+        "sot": 0.26,
+        "goals": 0.108,
+        "assists": 0.065,
+        "cards": 0.144
+      },
+      "props": {
+        "shots_over_1.5": 0.149,
+        "sot_over_0.5": 0.229,
+        "to_be_carded": 0.134,
+        "goal_or_assist": 0.159,
+        "to_score": 0.103
+      }
+    },
+    "Player 68": {
+      "player_id": "player_68",
+      "player_name": "Player 68",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 82,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.824,
+        "sot": 1.303,
+        "goals": 0.292,
+        "assists": 0.182,
+        "cards": 0.31
+      },
+      "props": {
+        "shots_over_1.5": 0.773,
+        "sot_over_0.5": 0.728,
+        "to_be_carded": 0.266,
+        "goal_or_assist": 0.377,
+        "to_score": 0.253
+      }
+    },
+    "Player 69": {
+      "player_id": "player_69",
+      "player_name": "Player 69",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.623,
+        "sot": 0.231,
+        "goals": 0.091,
+        "assists": 0.049,
+        "cards": 0.126
+      },
+      "props": {
+        "shots_over_1.5": 0.13,
+        "sot_over_0.5": 0.206,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.131,
+        "to_score": 0.087
+      }
+    },
+    "Player 70": {
+      "player_id": "player_70",
+      "player_name": "Player 70",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.63,
+        "sot": 0.231,
+        "goals": 0.098,
+        "assists": 0.056,
+        "cards": 0.126
+      },
+      "props": {
+        "shots_over_1.5": 0.132,
+        "sot_over_0.5": 0.206,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.143,
+        "to_score": 0.093
+      }
+    },
+    "Player 71": {
+      "player_id": "player_71",
+      "player_name": "Player 71",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 83,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.896,
+        "sot": 1.346,
+        "goals": 0.304,
+        "assists": 0.194,
+        "cards": 0.314
+      },
+      "props": {
+        "shots_over_1.5": 0.785,
+        "sot_over_0.5": 0.74,
+        "to_be_carded": 0.269,
+        "goal_or_assist": 0.392,
+        "to_score": 0.262
+      }
+    },
+    "Player 72": {
+      "player_id": "player_72",
+      "player_name": "Player 72",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 61,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.569,
+        "sot": 0.203,
+        "goals": 0.081,
+        "assists": 0.041,
+        "cards": 0.108
+      },
+      "props": {
+        "shots_over_1.5": 0.112,
+        "sot_over_0.5": 0.184,
+        "to_be_carded": 0.103,
+        "goal_or_assist": 0.115,
+        "to_score": 0.078
+      }
+    },
+    "Player 73": {
+      "player_id": "player_73",
+      "player_name": "Player 73",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 70,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.84,
+        "sot": 0.334,
+        "goals": 0.163,
+        "assists": 0.093,
+        "cards": 0.187
+      },
+      "props": {
+        "shots_over_1.5": 0.206,
+        "sot_over_0.5": 0.284,
+        "to_be_carded": 0.17,
+        "goal_or_assist": 0.226,
+        "to_score": 0.151
+      }
+    },
+    "Player 74": {
+      "player_id": "player_74",
+      "player_name": "Player 74",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.778,
+        "sot": 0.31,
+        "goals": 0.144,
+        "assists": 0.083,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.183,
+        "sot_over_0.5": 0.266,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.203,
+        "to_score": 0.134
+      }
+    },
+    "Player 75": {
+      "player_id": "player_75",
+      "player_name": "Player 75",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.017,
+        "sot": 0.442,
+        "goals": 0.217,
+        "assists": 0.133,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.27,
+        "sot_over_0.5": 0.357,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.295,
+        "to_score": 0.195
+      }
+    },
+    "Player 76": {
+      "player_id": "player_76",
+      "player_name": "Player 76",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.813,
+        "sot": 0.33,
+        "goals": 0.153,
+        "assists": 0.092,
+        "cards": 0.176
+      },
+      "props": {
+        "shots_over_1.5": 0.196,
+        "sot_over_0.5": 0.281,
+        "to_be_carded": 0.162,
+        "goal_or_assist": 0.218,
+        "to_score": 0.142
+      }
+    },
+    "Player 77": {
+      "player_id": "player_77",
+      "player_name": "Player 77",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.679,
+        "sot": 0.26,
+        "goals": 0.108,
+        "assists": 0.065,
+        "cards": 0.144
+      },
+      "props": {
+        "shots_over_1.5": 0.149,
+        "sot_over_0.5": 0.229,
+        "to_be_carded": 0.134,
+        "goal_or_assist": 0.159,
+        "to_score": 0.103
+      }
+    },
+    "Player 78": {
+      "player_id": "player_78",
+      "player_name": "Player 78",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 77,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.087,
+        "sot": 0.479,
+        "goals": 0.24,
+        "assists": 0.145,
+        "cards": 0.257
+      },
+      "props": {
+        "shots_over_1.5": 0.296,
+        "sot_over_0.5": 0.381,
+        "to_be_carded": 0.226,
+        "goal_or_assist": 0.32,
+        "to_score": 0.213
+      }
+    },
+    "Player 79": {
+      "player_id": "player_79",
+      "player_name": "Player 79",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 60,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.54,
+        "sot": 0.187,
+        "goals": 0.067,
+        "assists": 0.033,
+        "cards": 0.1
+      },
+      "props": {
+        "shots_over_1.5": 0.103,
+        "sot_over_0.5": 0.17,
+        "to_be_carded": 0.095,
+        "goal_or_assist": 0.095,
+        "to_score": 0.064
+      }
+    },
+    "Player 80": {
+      "player_id": "player_80",
+      "player_name": "Player 80",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 84,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.968,
+        "sot": 1.409,
+        "goals": 0.327,
+        "assists": 0.196,
+        "cards": 0.327
+      },
+      "props": {
+        "shots_over_1.5": 0.796,
+        "sot_over_0.5": 0.756,
+        "to_be_carded": 0.279,
+        "goal_or_assist": 0.407,
+        "to_score": 0.279
+      }
+    },
+    "Player 81": {
+      "player_id": "player_81",
+      "player_name": "Player 81",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.616,
+        "sot": 0.224,
+        "goals": 0.091,
+        "assists": 0.049,
+        "cards": 0.119
+      },
+      "props": {
+        "shots_over_1.5": 0.127,
+        "sot_over_0.5": 0.201,
+        "to_be_carded": 0.112,
+        "goal_or_assist": 0.131,
+        "to_score": 0.087
+      }
+    },
+    "Player 82": {
+      "player_id": "player_82",
+      "player_name": "Player 82",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.797,
+        "sot": 0.314,
+        "goals": 0.146,
+        "assists": 0.084,
+        "cards": 0.169
+      },
+      "props": {
+        "shots_over_1.5": 0.19,
+        "sot_over_0.5": 0.27,
+        "to_be_carded": 0.155,
+        "goal_or_assist": 0.205,
+        "to_score": 0.136
+      }
+    },
+    "Player 83": {
+      "player_id": "player_83",
+      "player_name": "Player 83",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.813,
+        "sot": 0.33,
+        "goals": 0.153,
+        "assists": 0.092,
+        "cards": 0.176
+      },
+      "props": {
+        "shots_over_1.5": 0.196,
+        "sot_over_0.5": 0.281,
+        "to_be_carded": 0.162,
+        "goal_or_assist": 0.218,
+        "to_score": 0.142
+      }
+    },
+    "Player 84": {
+      "player_id": "player_84",
+      "player_name": "Player 84",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.63,
+        "sot": 0.231,
+        "goals": 0.098,
+        "assists": 0.056,
+        "cards": 0.126
+      },
+      "props": {
+        "shots_over_1.5": 0.132,
+        "sot_over_0.5": 0.206,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.143,
+        "to_score": 0.093
+      }
+    },
+    "Player 85": {
+      "player_id": "player_85",
+      "player_name": "Player 85",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 62,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.592,
+        "sot": 0.214,
+        "goals": 0.083,
+        "assists": 0.041,
+        "cards": 0.117
+      },
+      "props": {
+        "shots_over_1.5": 0.119,
+        "sot_over_0.5": 0.192,
+        "to_be_carded": 0.111,
+        "goal_or_assist": 0.117,
+        "to_score": 0.079
+      }
+    },
+    "Player 86": {
+      "player_id": "player_86",
+      "player_name": "Player 86",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.323,
+        "sot": 1.651,
+        "goals": 0.386,
+        "assists": 0.237,
+        "cards": 0.386
+      },
+      "props": {
+        "shots_over_1.5": 0.844,
+        "sot_over_0.5": 0.808,
+        "to_be_carded": 0.32,
+        "goal_or_assist": 0.464,
+        "to_score": 0.32
+      }
+    },
+    "Player 87": {
+      "player_id": "player_87",
+      "player_name": "Player 87",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 79,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.607,
+        "sot": 1.159,
+        "goals": 0.255,
+        "assists": 0.158,
+        "cards": 0.272
+      },
+      "props": {
+        "shots_over_1.5": 0.734,
+        "sot_over_0.5": 0.686,
+        "to_be_carded": 0.238,
+        "goal_or_assist": 0.338,
+        "to_score": 0.225
+      }
+    },
+    "Player 88": {
+      "player_id": "player_88",
+      "player_name": "Player 88",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.912,
+        "sot": 0.376,
+        "goals": 0.184,
+        "assists": 0.104,
+        "cards": 0.208
+      },
+      "props": {
+        "shots_over_1.5": 0.232,
+        "sot_over_0.5": 0.313,
+        "to_be_carded": 0.188,
+        "goal_or_assist": 0.25,
+        "to_score": 0.168
+      }
+    },
+    "Player 89": {
+      "player_id": "player_89",
+      "player_name": "Player 89",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.032,
+        "sot": 1.445,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.806,
+        "sot_over_0.5": 0.764,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 90": {
+      "player_id": "player_90",
+      "player_name": "Player 90",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 88,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.256,
+        "sot": 1.594,
+        "goals": 0.372,
+        "assists": 0.235,
+        "cards": 0.381
+      },
+      "props": {
+        "shots_over_1.5": 0.836,
+        "sot_over_0.5": 0.797,
+        "to_be_carded": 0.317,
+        "goal_or_assist": 0.455,
+        "to_score": 0.31
+      }
+    },
+    "Player 91": {
+      "player_id": "player_91",
+      "player_name": "Player 91",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 81,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.754,
+        "sot": 1.26,
+        "goals": 0.288,
+        "assists": 0.171,
+        "cards": 0.297
+      },
+      "props": {
+        "shots_over_1.5": 0.761,
+        "sot_over_0.5": 0.716,
+        "to_be_carded": 0.257,
+        "goal_or_assist": 0.368,
+        "to_score": 0.25
+      }
+    },
+    "Player 92": {
+      "player_id": "player_92",
+      "player_name": "Player 92",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 79,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.625,
+        "sot": 1.176,
+        "goals": 0.263,
+        "assists": 0.158,
+        "cards": 0.281
+      },
+      "props": {
+        "shots_over_1.5": 0.737,
+        "sot_over_0.5": 0.692,
+        "to_be_carded": 0.245,
+        "goal_or_assist": 0.344,
+        "to_score": 0.232
+      }
+    },
+    "Player 93": {
+      "player_id": "player_93",
+      "player_name": "Player 93",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.771,
+        "sot": 0.302,
+        "goals": 0.136,
+        "assists": 0.076,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.181,
+        "sot_over_0.5": 0.261,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.191,
+        "to_score": 0.127
+      }
+    },
+    "Player 94": {
+      "player_id": "player_94",
+      "player_name": "Player 94",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.032,
+        "sot": 1.445,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.806,
+        "sot_over_0.5": 0.764,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 95": {
+      "player_id": "player_95",
+      "player_name": "Player 95",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 80,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.684,
+        "sot": 1.209,
+        "goals": 0.267,
+        "assists": 0.169,
+        "cards": 0.284
+      },
+      "props": {
+        "shots_over_1.5": 0.749,
+        "sot_over_0.5": 0.701,
+        "to_be_carded": 0.248,
+        "goal_or_assist": 0.353,
+        "to_score": 0.234
+      }
+    },
+    "Player 96": {
+      "player_id": "player_96",
+      "player_name": "Player 96",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 68,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.771,
+        "sot": 0.302,
+        "goals": 0.136,
+        "assists": 0.076,
+        "cards": 0.166
+      },
+      "props": {
+        "shots_over_1.5": 0.181,
+        "sot_over_0.5": 0.261,
+        "to_be_carded": 0.153,
+        "goal_or_assist": 0.191,
+        "to_score": 0.127
+      }
+    },
+    "Player 97": {
+      "player_id": "player_97",
+      "player_name": "Player 97",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.352,
+        "sot": 1.671,
+        "goals": 0.396,
+        "assists": 0.247,
+        "cards": 0.396
+      },
+      "props": {
+        "shots_over_1.5": 0.848,
+        "sot_over_0.5": 0.812,
+        "to_be_carded": 0.327,
+        "goal_or_assist": 0.474,
+        "to_score": 0.327
+      }
+    },
+    "Player 98": {
+      "player_id": "player_98",
+      "player_name": "Player 98",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 74,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.97,
+        "sot": 0.403,
+        "goals": 0.197,
+        "assists": 0.115,
+        "cards": 0.222
+      },
+      "props": {
+        "shots_over_1.5": 0.253,
+        "sot_over_0.5": 0.332,
+        "to_be_carded": 0.199,
+        "goal_or_assist": 0.268,
+        "to_score": 0.179
+      }
+    },
+    "Player 99": {
+      "player_id": "player_99",
+      "player_name": "Player 99",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 67,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.744,
+        "sot": 0.29,
+        "goals": 0.127,
+        "assists": 0.074,
+        "cards": 0.156
+      },
+      "props": {
+        "shots_over_1.5": 0.171,
+        "sot_over_0.5": 0.252,
+        "to_be_carded": 0.145,
+        "goal_or_assist": 0.182,
+        "to_score": 0.119
+      }
+    },
+    "Player 100": {
+      "player_id": "player_100",
+      "player_name": "Player 100",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.813,
+        "sot": 0.322,
+        "goals": 0.153,
+        "assists": 0.084,
+        "cards": 0.176
+      },
+      "props": {
+        "shots_over_1.5": 0.196,
+        "sot_over_0.5": 0.275,
+        "to_be_carded": 0.162,
+        "goal_or_assist": 0.212,
+        "to_score": 0.142
+      }
+    },
+    "Player 101": {
+      "player_id": "player_101",
+      "player_name": "Player 101",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.342,
+        "sot": 1.661,
+        "goals": 0.386,
+        "assists": 0.247,
+        "cards": 0.396
+      },
+      "props": {
+        "shots_over_1.5": 0.846,
+        "sot_over_0.5": 0.81,
+        "to_be_carded": 0.327,
+        "goal_or_assist": 0.469,
+        "to_score": 0.32
+      }
+    },
+    "Player 102": {
+      "player_id": "player_102",
+      "player_name": "Player 102",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.704,
+        "sot": 0.264,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.157,
+        "sot_over_0.5": 0.232,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 103": {
+      "player_id": "player_103",
+      "player_name": "Player 103",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 86,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.125,
+        "sot": 1.51,
+        "goals": 0.354,
+        "assists": 0.22,
+        "cards": 0.354
+      },
+      "props": {
+        "shots_over_1.5": 0.819,
+        "sot_over_0.5": 0.779,
+        "to_be_carded": 0.298,
+        "goal_or_assist": 0.436,
+        "to_score": 0.298
+      }
+    },
+    "Player 104": {
+      "player_id": "player_104",
+      "player_name": "Player 104",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.171,
+        "sot": 1.537,
+        "goals": 0.358,
+        "assists": 0.222,
+        "cards": 0.367
+      },
+      "props": {
+        "shots_over_1.5": 0.825,
+        "sot_over_0.5": 0.785,
+        "to_be_carded": 0.307,
+        "goal_or_assist": 0.44,
+        "to_score": 0.301
+      }
+    },
+    "Player 105": {
+      "player_id": "player_105",
+      "player_name": "Player 105",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 83,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.896,
+        "sot": 1.346,
+        "goals": 0.304,
+        "assists": 0.194,
+        "cards": 0.314
+      },
+      "props": {
+        "shots_over_1.5": 0.785,
+        "sot_over_0.5": 0.74,
+        "to_be_carded": 0.269,
+        "goal_or_assist": 0.392,
+        "to_score": 0.262
+      }
+    },
+    "Player 106": {
+      "player_id": "player_106",
+      "player_name": "Player 106",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.686,
+        "sot": 0.26,
+        "goals": 0.116,
+        "assists": 0.065,
+        "cards": 0.144
+      },
+      "props": {
+        "shots_over_1.5": 0.151,
+        "sot_over_0.5": 0.229,
+        "to_be_carded": 0.134,
+        "goal_or_assist": 0.165,
+        "to_score": 0.109
+      }
+    },
+    "Player 107": {
+      "player_id": "player_107",
+      "player_name": "Player 107",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 73,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.941,
+        "sot": 0.389,
+        "goals": 0.195,
+        "assists": 0.114,
+        "cards": 0.211
+      },
+      "props": {
+        "shots_over_1.5": 0.243,
+        "sot_over_0.5": 0.322,
+        "to_be_carded": 0.19,
+        "goal_or_assist": 0.265,
+        "to_score": 0.177
+      }
+    },
+    "Player 108": {
+      "player_id": "player_108",
+      "player_name": "Player 108",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.719,
+        "sot": 0.279,
+        "goals": 0.125,
+        "assists": 0.073,
+        "cards": 0.154
+      },
+      "props": {
+        "shots_over_1.5": 0.162,
+        "sot_over_0.5": 0.243,
+        "to_be_carded": 0.143,
+        "goal_or_assist": 0.18,
+        "to_score": 0.117
+      }
+    },
+    "Player 109": {
+      "player_id": "player_109",
+      "player_name": "Player 109",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.017,
+        "sot": 0.442,
+        "goals": 0.217,
+        "assists": 0.133,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.27,
+        "sot_over_0.5": 0.357,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.295,
+        "to_score": 0.195
+      }
+    },
+    "Player 110": {
+      "player_id": "player_110",
+      "player_name": "Player 110",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.051,
+        "sot": 1.464,
+        "goals": 0.34,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.808,
+        "sot_over_0.5": 0.769,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.422,
+        "to_score": 0.288
+      }
+    },
+    "Player 111": {
+      "player_id": "player_111",
+      "player_name": "Player 111",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.679,
+        "sot": 0.253,
+        "goals": 0.108,
+        "assists": 0.058,
+        "cards": 0.137
+      },
+      "props": {
+        "shots_over_1.5": 0.149,
+        "sot_over_0.5": 0.223,
+        "to_be_carded": 0.128,
+        "goal_or_assist": 0.153,
+        "to_score": 0.103
+      }
+    },
+    "Player 112": {
+      "player_id": "player_112",
+      "player_name": "Player 112",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 65,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.679,
+        "sot": 0.253,
+        "goals": 0.108,
+        "assists": 0.058,
+        "cards": 0.137
+      },
+      "props": {
+        "shots_over_1.5": 0.149,
+        "sot_over_0.5": 0.223,
+        "to_be_carded": 0.128,
+        "goal_or_assist": 0.153,
+        "to_score": 0.103
+      }
+    },
+    "Player 113": {
+      "player_id": "player_113",
+      "player_name": "Player 113",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 67,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.744,
+        "sot": 0.29,
+        "goals": 0.127,
+        "assists": 0.074,
+        "cards": 0.156
+      },
+      "props": {
+        "shots_over_1.5": 0.171,
+        "sot_over_0.5": 0.252,
+        "to_be_carded": 0.145,
+        "goal_or_assist": 0.182,
+        "to_score": 0.119
+      }
+    },
+    "Player 114": {
+      "player_id": "player_114",
+      "player_name": "Player 114",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.704,
+        "sot": 0.264,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.157,
+        "sot_over_0.5": 0.232,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
+    },
+    "Player 115": {
+      "player_id": "player_115",
+      "player_name": "Player 115",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 70,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.84,
+        "sot": 0.334,
+        "goals": 0.163,
+        "assists": 0.093,
+        "cards": 0.187
+      },
+      "props": {
+        "shots_over_1.5": 0.206,
+        "sot_over_0.5": 0.284,
+        "to_be_carded": 0.17,
+        "goal_or_assist": 0.226,
+        "to_score": 0.151
+      }
+    },
+    "Player 116": {
+      "player_id": "player_116",
+      "player_name": "Player 116",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 82,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.815,
+        "sot": 1.294,
+        "goals": 0.292,
+        "assists": 0.182,
+        "cards": 0.301
+      },
+      "props": {
+        "shots_over_1.5": 0.772,
+        "sot_over_0.5": 0.726,
+        "to_be_carded": 0.26,
+        "goal_or_assist": 0.377,
+        "to_score": 0.253
+      }
+    },
+    "Player 117": {
+      "player_id": "player_117",
+      "player_name": "Player 117",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 82,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.824,
+        "sot": 1.303,
+        "goals": 0.292,
+        "assists": 0.182,
+        "cards": 0.31
+      },
+      "props": {
+        "shots_over_1.5": 0.773,
+        "sot_over_0.5": 0.728,
+        "to_be_carded": 0.266,
+        "goal_or_assist": 0.377,
+        "to_score": 0.253
+      }
+    },
+    "Player 118": {
+      "player_id": "player_118",
+      "player_name": "Player 118",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 71,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.868,
+        "sot": 0.347,
+        "goals": 0.166,
+        "assists": 0.095,
+        "cards": 0.189
+      },
+      "props": {
+        "shots_over_1.5": 0.216,
+        "sot_over_0.5": 0.293,
+        "to_be_carded": 0.172,
+        "goal_or_assist": 0.229,
+        "to_score": 0.153
+      }
+    },
+    "Player 119": {
+      "player_id": "player_119",
+      "player_name": "Player 119",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 79,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.625,
+        "sot": 1.176,
+        "goals": 0.263,
+        "assists": 0.158,
+        "cards": 0.281
+      },
+      "props": {
+        "shots_over_1.5": 0.737,
+        "sot_over_0.5": 0.692,
+        "to_be_carded": 0.245,
+        "goal_or_assist": 0.344,
+        "to_score": 0.232
+      }
+    },
+    "Player 120": {
+      "player_id": "player_120",
+      "player_name": "Player 120",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 86,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.125,
+        "sot": 1.51,
+        "goals": 0.354,
+        "assists": 0.22,
+        "cards": 0.354
+      },
+      "props": {
+        "shots_over_1.5": 0.819,
+        "sot_over_0.5": 0.779,
+        "to_be_carded": 0.298,
+        "goal_or_assist": 0.436,
+        "to_score": 0.298
+      }
+    },
+    "Player 121": {
+      "player_id": "player_121",
+      "player_name": "Player 121",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 76,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.039,
+        "sot": 0.448,
+        "goals": 0.22,
+        "assists": 0.135,
+        "cards": 0.245
+      },
+      "props": {
+        "shots_over_1.5": 0.278,
+        "sot_over_0.5": 0.361,
+        "to_be_carded": 0.217,
+        "goal_or_assist": 0.299,
+        "to_score": 0.197
+      }
+    },
+    "Player 122": {
+      "player_id": "player_122",
+      "player_name": "Player 122",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.041,
+        "sot": 1.454,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.807,
+        "sot_over_0.5": 0.766,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 123": {
+      "player_id": "player_123",
+      "player_name": "Player 123",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.017,
+        "sot": 0.442,
+        "goals": 0.217,
+        "assists": 0.133,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.27,
+        "sot_over_0.5": 0.357,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.295,
+        "to_score": 0.195
+      }
+    },
+    "Player 124": {
+      "player_id": "player_124",
+      "player_name": "Player 124",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 77,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.087,
+        "sot": 0.479,
+        "goals": 0.24,
+        "assists": 0.145,
+        "cards": 0.257
+      },
+      "props": {
+        "shots_over_1.5": 0.296,
+        "sot_over_0.5": 0.381,
+        "to_be_carded": 0.226,
+        "goal_or_assist": 0.32,
+        "to_score": 0.213
+      }
+    },
+    "Player 125": {
+      "player_id": "player_125",
+      "player_name": "Player 125",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.548,
+        "sot": 1.127,
+        "goals": 0.251,
+        "assists": 0.147,
+        "cards": 0.26
+      },
+      "props": {
+        "shots_over_1.5": 0.722,
+        "sot_over_0.5": 0.676,
+        "to_be_carded": 0.229,
+        "goal_or_assist": 0.329,
+        "to_score": 0.222
+      }
+    },
+    "Player 126": {
+      "player_id": "player_126",
+      "player_name": "Player 126",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 81,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.736,
+        "sot": 1.242,
+        "goals": 0.279,
+        "assists": 0.171,
+        "cards": 0.288
+      },
+      "props": {
+        "shots_over_1.5": 0.758,
+        "sot_over_0.5": 0.711,
+        "to_be_carded": 0.25,
+        "goal_or_assist": 0.362,
+        "to_score": 0.243
+      }
+    },
+    "Player 127": {
+      "player_id": "player_127",
+      "player_name": "Player 127",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.323,
+        "sot": 1.651,
+        "goals": 0.386,
+        "assists": 0.237,
+        "cards": 0.386
+      },
+      "props": {
+        "shots_over_1.5": 0.844,
+        "sot_over_0.5": 0.808,
+        "to_be_carded": 0.32,
+        "goal_or_assist": 0.464,
+        "to_score": 0.32
+      }
+    },
+    "Player 128": {
+      "player_id": "player_128",
+      "player_name": "Player 128",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.896,
+        "sot": 0.368,
+        "goals": 0.176,
+        "assists": 0.104,
+        "cards": 0.2
+      },
+      "props": {
+        "shots_over_1.5": 0.226,
+        "sot_over_0.5": 0.308,
+        "to_be_carded": 0.181,
+        "goal_or_assist": 0.244,
+        "to_score": 0.161
+      }
+    },
+    "Player 129": {
+      "player_id": "player_129",
+      "player_name": "Player 129",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 85,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.032,
+        "sot": 1.445,
+        "goals": 0.331,
+        "assists": 0.208,
+        "cards": 0.34
+      },
+      "props": {
+        "shots_over_1.5": 0.806,
+        "sot_over_0.5": 0.764,
+        "to_be_carded": 0.288,
+        "goal_or_assist": 0.416,
+        "to_score": 0.281
+      }
+    },
+    "Player 130": {
+      "player_id": "player_130",
+      "player_name": "Player 130",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 74,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.97,
+        "sot": 0.403,
+        "goals": 0.197,
+        "assists": 0.115,
+        "cards": 0.222
+      },
+      "props": {
+        "shots_over_1.5": 0.253,
+        "sot_over_0.5": 0.332,
+        "to_be_carded": 0.199,
+        "goal_or_assist": 0.268,
+        "to_score": 0.179
+      }
+    },
+    "Player 131": {
+      "player_id": "player_131",
+      "player_name": "Player 131",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 78,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.548,
+        "sot": 1.127,
+        "goals": 0.251,
+        "assists": 0.147,
+        "cards": 0.26
+      },
+      "props": {
+        "shots_over_1.5": 0.722,
+        "sot_over_0.5": 0.676,
+        "to_be_carded": 0.229,
+        "goal_or_assist": 0.329,
+        "to_score": 0.222
+      }
+    },
+    "Player 132": {
+      "player_id": "player_132",
+      "player_name": "Player 132",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 88,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.266,
+        "sot": 1.604,
+        "goals": 0.381,
+        "assists": 0.235,
+        "cards": 0.381
+      },
+      "props": {
+        "shots_over_1.5": 0.837,
+        "sot_over_0.5": 0.799,
+        "to_be_carded": 0.317,
+        "goal_or_assist": 0.46,
+        "to_score": 0.317
+      }
+    },
+    "Player 133": {
+      "player_id": "player_133",
+      "player_name": "Player 133",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.912,
+        "sot": 0.376,
+        "goals": 0.184,
+        "assists": 0.104,
+        "cards": 0.208
+      },
+      "props": {
+        "shots_over_1.5": 0.232,
+        "sot_over_0.5": 0.313,
+        "to_be_carded": 0.188,
+        "goal_or_assist": 0.25,
+        "to_score": 0.168
+      }
+    },
+    "Player 134": {
+      "player_id": "player_134",
+      "player_name": "Player 134",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.0,
+        "sot": 0.425,
+        "goals": 0.208,
+        "assists": 0.125,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.264,
+        "sot_over_0.5": 0.346,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.283,
+        "to_score": 0.188
+      }
+    },
+    "Player 135": {
+      "player_id": "player_135",
+      "player_name": "Player 135",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.352,
+        "sot": 1.671,
+        "goals": 0.396,
+        "assists": 0.247,
+        "cards": 0.396
+      },
+      "props": {
+        "shots_over_1.5": 0.848,
+        "sot_over_0.5": 0.812,
+        "to_be_carded": 0.327,
+        "goal_or_assist": 0.474,
+        "to_score": 0.327
+      }
+    },
+    "Player 136": {
+      "player_id": "player_136",
+      "player_name": "Player 136",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 81,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.745,
+        "sot": 1.251,
+        "goals": 0.279,
+        "assists": 0.171,
+        "cards": 0.297
+      },
+      "props": {
+        "shots_over_1.5": 0.759,
+        "sot_over_0.5": 0.714,
+        "to_be_carded": 0.257,
+        "goal_or_assist": 0.362,
+        "to_score": 0.243
+      }
+    },
+    "Player 137": {
+      "player_id": "player_137",
+      "player_name": "Player 137",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 87,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.209,
+        "sot": 1.566,
+        "goals": 0.367,
+        "assists": 0.232,
+        "cards": 0.367
+      },
+      "props": {
+        "shots_over_1.5": 0.83,
+        "sot_over_0.5": 0.791,
+        "to_be_carded": 0.307,
+        "goal_or_assist": 0.451,
+        "to_score": 0.307
+      }
+    },
+    "Player 138": {
+      "player_id": "player_138",
+      "player_name": "Player 138",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 63,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.616,
+        "sot": 0.224,
+        "goals": 0.091,
+        "assists": 0.049,
+        "cards": 0.119
+      },
+      "props": {
+        "shots_over_1.5": 0.127,
+        "sot_over_0.5": 0.201,
+        "to_be_carded": 0.112,
+        "goal_or_assist": 0.131,
+        "to_score": 0.087
+      }
+    },
+    "Player 139": {
+      "player_id": "player_139",
+      "player_name": "Player 139",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 72,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.912,
+        "sot": 0.376,
+        "goals": 0.184,
+        "assists": 0.112,
+        "cards": 0.208
+      },
+      "props": {
+        "shots_over_1.5": 0.232,
+        "sot_over_0.5": 0.313,
+        "to_be_carded": 0.188,
+        "goal_or_assist": 0.256,
+        "to_score": 0.168
+      }
+    },
+    "Player 140": {
+      "player_id": "player_140",
+      "player_name": "Player 140",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 75,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.017,
+        "sot": 0.433,
+        "goals": 0.217,
+        "assists": 0.125,
+        "cards": 0.233
+      },
+      "props": {
+        "shots_over_1.5": 0.27,
+        "sot_over_0.5": 0.352,
+        "to_be_carded": 0.208,
+        "goal_or_assist": 0.289,
+        "to_score": 0.195
+      }
+    },
+    "Player 141": {
+      "player_id": "player_141",
+      "player_name": "Player 141",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 76,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 1.056,
+        "sot": 0.456,
+        "goals": 0.228,
+        "assists": 0.135,
+        "cards": 0.245
+      },
+      "props": {
+        "shots_over_1.5": 0.285,
+        "sot_over_0.5": 0.366,
+        "to_be_carded": 0.217,
+        "goal_or_assist": 0.304,
+        "to_score": 0.204
+      }
+    },
+    "Player 142": {
+      "player_id": "player_142",
+      "player_name": "Player 142",
+      "team_id": "bournemouth",
+      "team_name": "Bournemouth",
+      "expected_minutes": 64,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.654,
+        "sot": 0.242,
+        "goals": 0.107,
+        "assists": 0.057,
+        "cards": 0.135
+      },
+      "props": {
+        "shots_over_1.5": 0.14,
+        "sot_over_0.5": 0.215,
+        "to_be_carded": 0.126,
+        "goal_or_assist": 0.151,
+        "to_score": 0.101
+      }
+    },
+    "Player 143": {
+      "player_id": "player_143",
+      "player_name": "Player 143",
+      "team_id": "newcastle",
+      "team_name": "Newcastle",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.719,
+        "sot": 0.271,
+        "goals": 0.125,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.162,
+        "sot_over_0.5": 0.238,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.174,
+        "to_score": 0.117
+      }
+    },
+    "Player 144": {
+      "player_id": "player_144",
+      "player_name": "Player 144",
+      "team_id": "manchester_city",
+      "team_name": "Manchester City",
+      "expected_minutes": 69,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.813,
+        "sot": 0.33,
+        "goals": 0.153,
+        "assists": 0.092,
+        "cards": 0.176
+      },
+      "props": {
+        "shots_over_1.5": 0.196,
+        "sot_over_0.5": 0.281,
+        "to_be_carded": 0.162,
+        "goal_or_assist": 0.218,
+        "to_score": 0.142
+      }
+    },
+    "Player 145": {
+      "player_id": "player_145",
+      "player_name": "Player 145",
+      "team_id": "arsenal",
+      "team_name": "Arsenal",
+      "expected_minutes": 79,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.607,
+        "sot": 1.159,
+        "goals": 0.255,
+        "assists": 0.158,
+        "cards": 0.272
+      },
+      "props": {
+        "shots_over_1.5": 0.734,
+        "sot_over_0.5": 0.686,
+        "to_be_carded": 0.238,
+        "goal_or_assist": 0.338,
+        "to_score": 0.225
+      }
+    },
+    "Player 146": {
+      "player_id": "player_146",
+      "player_name": "Player 146",
+      "team_id": "liverpool",
+      "team_name": "Liverpool",
+      "expected_minutes": 80,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 2.684,
+        "sot": 1.209,
+        "goals": 0.267,
+        "assists": 0.169,
+        "cards": 0.284
+      },
+      "props": {
+        "shots_over_1.5": 0.749,
+        "sot_over_0.5": 0.701,
+        "to_be_carded": 0.248,
+        "goal_or_assist": 0.353,
+        "to_score": 0.234
+      }
+    },
+    "Player 147": {
+      "player_id": "player_147",
+      "player_name": "Player 147",
+      "team_id": "chelsea",
+      "team_name": "Chelsea",
+      "expected_minutes": 89,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 3.323,
+        "sot": 1.651,
+        "goals": 0.386,
+        "assists": 0.237,
+        "cards": 0.386
+      },
+      "props": {
+        "shots_over_1.5": 0.844,
+        "sot_over_0.5": 0.808,
+        "to_be_carded": 0.32,
+        "goal_or_assist": 0.464,
+        "to_score": 0.32
+      }
+    },
+    "Player 148": {
+      "player_id": "player_148",
+      "player_name": "Player 148",
+      "team_id": "man_united",
+      "team_name": "Man United",
+      "expected_minutes": 71,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.868,
+        "sot": 0.355,
+        "goals": 0.166,
+        "assists": 0.103,
+        "cards": 0.189
+      },
+      "props": {
+        "shots_over_1.5": 0.216,
+        "sot_over_0.5": 0.299,
+        "to_be_carded": 0.172,
+        "goal_or_assist": 0.235,
+        "to_score": 0.153
+      }
+    },
+    "Player 149": {
+      "player_id": "player_149",
+      "player_name": "Player 149",
+      "team_id": "tottenham",
+      "team_name": "Tottenham",
+      "expected_minutes": 66,
+      "season_minutes": 1800,
+      "matches_used": 20,
+      "projected_per_match": {
+        "shots": 0.711,
+        "sot": 0.271,
+        "goals": 0.117,
+        "assists": 0.066,
+        "cards": 0.147
+      },
+      "props": {
+        "shots_over_1.5": 0.16,
+        "sot_over_0.5": 0.238,
+        "to_be_carded": 0.136,
+        "goal_or_assist": 0.168,
+        "to_score": 0.111
+      }
     }
   },
-  "screener": {
-    "generated_at": "2026-09-13",
-    "qualifying": [
-      "Abdukodir Khusanov",
-      "Allan",
-      "Antoine Semenyo",
-      "Ayyoub Bouaddi",
-      "Elliot Anderson",
-      "Enzo Fern\u00e1ndez",
-      "Erling Haaland",
-      "Floyd Samba",
-      "Ger\u00f3nimo Rulli",
-      "Gianluigi Donnarumma",
-      "Iliman Ndiaye",
-      "Josh Wilson-Esbrand",
-      "Jo\u0161ko Gvardiol",
-      "J\u00e9r\u00e9my Doku",
-      "Marc Gu\u00e9hi",
-      "Marcus Bettinelli",
-      "Mateo Kova\u010di\u0107",
-      "Matheus Nunes",
-      "Nico O'Reilly",
-      "Phil Foden",
-      "Rayan A\u00eft-Nouri",
-      "Rayan Cherki",
-      "Rico Lewis",
-      "Ryan McAidoo",
-      "R\u00faben Dias",
-      "Vitor Reis"
-    ],
-    "top_by_market": {
-      "shots_over_1.5": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
-      "sot_over_0.5": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
-      "to_be_carded": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
-      "goal_or_assist": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ]
-    }
-  }
+  "source": "FREE - FBRef per90 averages 25/26, 0 API calls, Semenyo = Man City since 09/01/2026"
 }
