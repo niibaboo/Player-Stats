@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stats</title></head>
 <body style="background:#0f1a2a;color:#fff;font-family:sans-serif;padding:16px">
-<h2 id="status">Loading...</h2><div id="list"></div>
+<h2 id="s">LOADING 1...</h2><div id="l"></div>
 <script>
-fetch('https://niibaboo.github.io/Player-Stats/player_stats_data.json?v='+Date.now())
-.then(r=>r.json()).then(d=>{
- const players=Object.values(d.players||{});
- document.getElementById('status').innerText=players.length+' players - LIVE FIXED';
- let html='';
- players.forEach(p=>{
-  const pr=p.props||{};
-  const ga=pr.goal_or_assist||pr['goal or assist']||0;
-  html+=`<div style="background:#14233a;padding:10px;margin:8px 0;border-radius:8px"><b>${p.player_name}</b> - ${p.team_name} (${p.expected_minutes}m)<br>Over 1.5 shots: ${Math.round((pr.shots_over_1.5||0)*100)}% | SOT 0.5: ${Math.round((pr.sot_over_0.5||0)*100)}% | Goal/Assist: ${Math.round(ga*100)}%</div>`;
- });
- document.getElementById('list').innerHTML=html;
-}).catch(e=>{ document.getElementById('status').innerText='Error: '+e; });
+document.getElementById('s').innerText='STEP 2 FETCHING';
+fetch('https://niibaboo.github.io/Player-Stats/player_stats_data.json?x='+Date.now())
+.then(function(r){ document.getElementById('s').innerText='STEP 3 STATUS '+r.status; return r.json(); })
+.then(function(d){
+  var list=Object.values(d.players||{});
+  document.getElementById('s').innerText=list.length+' PLAYERS ✅ DONE';
+  var h='';
+  list.forEach(function(p){ h+='<div style="background:#14233a;padding:10px;margin:8px 0;border-radius:8px"><b>'+p.player_name+'</b> - '+p.team_name+'</div>'; });
+  document.getElementById('l').innerHTML=h;
+}).catch(function(e){ document.getElementById('s').innerText='FAIL '+e; });
 </script>
 </body></html>
