@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stats</title></head>
-<body style="background:#0f1a2a;color:#fff;font-family:sans-serif;padding:16px">
-<h2 id="s">LOADING 1...</h2><div id="l"></div>
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Player Stats</title>
+<style>body{background:#0f1a2a;color:#fff;font-family:sans-serif;padding:16px} .card{background:#14233a;padding:12px;margin:8px 0;border-radius:8px}</style>
+</head><body>
+<h2 id="s">LOADING...</h2><div id="l"></div>
 <script>
-document.getElementById('s').innerText='STEP 2 FETCHING';
+document.getElementById('s').textContent='FETCHING...';
 fetch('https://niibaboo.github.io/Player-Stats/player_stats_data.json?x='+Date.now())
-.then(function(r){ document.getElementById('s').innerText='STEP 3 STATUS '+r.status; return r.json(); })
-.then(function(d){
-  var list=Object.values(d.players||{});
-  document.getElementById('s').innerText=list.length+' PLAYERS ✅ DONE';
+.then(r=>{ document.getElementById('s').textContent='STATUS '+r.status; return r.json(); })
+.then(d=>{
+  var players=Object.values(d.players||{});
+  document.getElementById('s').textContent=players.length+' PLAYERS LOADED ✅';
   var h='';
-  list.forEach(function(p){ h+='<div style="background:#14233a;padding:10px;margin:8px 0;border-radius:8px"><b>'+p.player_name+'</b> - '+p.team_name+'</div>'; });
+  players.sort((a,b)=>(b.expected_minutes||0)-(a.expected_minutes||0)).forEach(p=>{
+    var pr=p.props||{};
+    var ga=pr.goal_or_assist||pr['goal or assist']||0;
+    h+='<div class=card><b>'+p.player_name+'</b> - '+p.team_name+' ('+p.expected_minutes+'m)<br>1.5 Shots: '+Math.round((pr.shots_over_1.5||0)*100)+'% | SOT: '+Math.round((pr.sot_over_0.5||0)*100)+'% | G/A: '+Math.round(ga*100)+'%</div>';
+  });
   document.getElementById('l').innerHTML=h;
-}).catch(function(e){ document.getElementById('s').innerText='FAIL '+e; });
+}).catch(e=>{ document.getElementById('s').textContent='FAIL: '+e; document.getElementById('s').style.color='red'; });
 </script>
 </body></html>
