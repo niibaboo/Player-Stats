@@ -1,4 +1,4 @@
-name: Update Player Stats
+name: player stats update process
 on:
   workflow_dispatch:
 
@@ -6,21 +6,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-            - uses: actions/checkout@v4
-            - uses: actions/cache@v4
-        with:
-          path: cache
-          key: thestatsapi-cache-v1
-            - uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-            - run: pip install requests
-            - run: python player_stat_model.py
+      - name: Install
+        run: pip install requests
+      - name: Run model
         env:
           THESTATSAPI_KEY: ${{ secrets.THESTATSAPI_KEY }}
-            - run: |
+        run: python player_stat_model.py
+      - name: Save
+        run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
-          git add player_stats_data.json docs/ -f || true
-          git commit -m "manual update [skip ci]" || true
+          git add docs/ player_stats_data.json -f || true
+          git diff --staged --quiet || git commit -m "manual update [skip ci]"
           git push
