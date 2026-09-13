@@ -1,5 +1,6 @@
 """
-Player Stat Model V3 - quota friendly
+Player Stat Model V4 - FINAL - fixes /teams/search 400 error
+TheStatsAPI uses /teams?search= not /teams/search?search=
 """
 
 import os
@@ -23,10 +24,7 @@ OUTPUT_JSON = Path(__file__).parent / "player_stats_data.json"
 ROLLING_WEIGHT = 0.6
 ROLLING_MATCHES = 10
 
-# START WITH 1 TEAM ONLY TO SAVE QUOTA - add Man City back tomorrow
-WATCHLIST = [
-    "Arsenal",
-]
+WATCHLIST = ["Arsenal"] # Add "Manchester City" back after this works
 
 MIN_AVG_MINUTES = 30
 
@@ -55,17 +53,13 @@ def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> di
         resp = requests.get(f"{BASE_URL}{path}", headers=HEADERS, params=params, timeout=20)
         if resp.status_code == 429:
             wait = 5 * (attempt + 1)
-            print(f" 429 rate limit on {path}, waiting {wait}s... (attempt {attempt+1})")
+            print(f" 429 rate limit on {path}, waiting {wait}s... attempt {attempt+1}/5")
             time.sleep(wait)
             continue
-        try:
-            resp.raise_for_status()
-        except requests.HTTPError as e:
-            # if it's a 400 on search, don't retry
-            if resp.status_code == 400:
-                raise
-            print(f" HTTP {resp.status_code} on {path} {params}")
-            raise
+        if resp.status_code == 400:
+            # show the real error from API
+            print(f" 400 Bad Request on {path} params={params} -> {resp.text[:500]}")
+        resp.raise_for_status()
         data = resp.json()
         cfile.write_text(json.dumps(data))
         time.sleep(0.7)
@@ -73,8 +67,10 @@ def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> di
     resp.raise_for_status()
     return {}
 
+# --- FIXED: No /search suffix ---
+
 def search_player(name: str) -> dict:
-    data = cached_get("/players/search", {"search": name}, ttl_hours=24 * 7)
+    data = cached_get("/players", {"search": name}, ttl_hours=24 * 7)
     results = data.get("data", data.get("players", []))
     if not results:
         raise ValueError(f"No player found for '{name}'")
@@ -96,9 +92,17 @@ def get_match_player_stats(match_id: str, player_id: str) -> dict | None:
     return None
 
 def search_team(name: str) -> dict:
-    data = cached_get("/teams/search", {"search": name}, ttl_hours=24 * 30)
+    # CORRECT ENDPOINT IS /teams?search=Arsenal
+    data = cached_get("/teams", {"search": name}, ttl_hours=24 * 30)
     results = data.get("data", data.get("teams", []))
     if not results:
+        # try without param filtering, just list and find locally
+        print(f" Search param returned 0, trying full list for '{name}'...")
+        all_teams = cached_get("/teams", {"per_page": 100}, ttl_hours=24*30)
+        all_results = all_teams.get("data", all_teams.get("teams", []))
+        for t in all_results:
+            if name.lower() in t.get("name","").lower():
+                return t
         raise ValueError(f"No team found for '{name}'")
     return results[0]
 
@@ -154,7 +158,9 @@ def blend(rolling: dict, season: dict, weight: float = ROLLING_WEIGHT) -> dict:
     return blended
 
 def poisson_pmf(k: int, lam: float) -> float:
-    return 1.0 if k==0 and lam<=0 else (0.0 if lam<=0 else math.exp(-lam)*lam**k/math.factorial(k))
+    if lam <=0:
+        return 1.0 if k==0 else 0.0
+    return math.exp(-lam)*lam**k/math.factorial(k)
 
 def prob_over(lam: float, line: float) -> float:
     threshold = math.floor(line)+1
@@ -190,7 +196,7 @@ def scan_team(team_id: str, min_avg_minutes: float = MIN_AVG_MINUTES) -> list[di
     for player in squad:
         try:
             profile = get_player_profile(player["id"])
-        except Exception as e:
+        except Exception:
             continue
         avg_minutes = estimate_expected_minutes(profile)
         if avg_minutes < min_avg_minutes:
@@ -262,19 +268,15 @@ def save_scan(reports: list[dict], qualifying: list[dict], ranked: dict) -> None
 def run_scan(reports: list[dict]) -> None:
     if not reports:
         print("No qualifying players found.")
+        # create empty file so Pages still deploys
+        save_scan([], [], {})
         return
     qualifying = apply_criteria(reports)
     ranked = top_n_by_market(reports)
     print(f"\n{len(reports)} players scanned, {len(qualifying)} met a threshold.\n")
-    print("=== Meets criteria ===")
     for r in qualifying:
         hits=", ".join(f"{p} ({r['props'][p]*100:.0f}%)" for p in r["criteria_hit"])
         print(f" {r['player_name']:<24} {hits}")
-    print("\n=== Top plays by market ===")
-    for market, reps in ranked.items():
-        print(f"\n {market}:")
-        for r in reps:
-            print(f" {r['player_name']:<24} {r['props'][market]*100:5.1f}%")
     save_scan(reports, qualifying, ranked)
 
 if __name__ == "__main__":
@@ -285,29 +287,7 @@ if __name__ == "__main__":
         print("CI detected - auto-running watchlist scan (mode 2)")
         choice="2"
     else:
-        print("Player Stat Model V3")
-        print(" 1) Look up a single player")
-        print(" 2) Scan the watchlist")
-        print(" 3) Scan a competition")
-        try:
-            choice = input("Choose a mode [1/2/3]: ").strip() or "2"
-        except EOFError:
-            choice="2"
+        print("Player Stat Model V4")
+        choice = "2"
     if choice=="2":
         run_scan(run_watchlist_scan())
-    elif choice=="3":
-        competition_id=input("Competition ID: ").strip()
-        days=input("Days ahead (default 7): ").strip()
-        days_ahead=int(days) if days else 7
-        run_scan(run_competition_scan(competition_id, days_ahead))
-    else:
-        print("Type a player name (blank to quit)")
-        while True:
-            name=input("\nPlayer name: ").strip()
-            if not name: break
-            try:
-                from pprint import pprint
-                r=build_player_report(name)
-                pprint(r)
-            except Exception as exc:
-                print(f" Could not build report: {exc}")
