@@ -1,137 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Player Stat Model</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player Stats LIVE</title>
 <style>
-:root{--navy:#101B2D;--card:#16233A;--card-hi:#1D2E48;--line:#2A3A54;--amber:#E3A542;--teal:#4FA8A0;--text:#ECEEF1;--muted:#8593A8;--bad:#D9695C;}
-*{box-sizing:border-box;}body{margin:0;background:var(--navy);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
-.wrap{max-width:480px;margin:0 auto;padding:20px 16px 48px;}
-header.kicker{color:var(--teal);font-size:13px;font-weight:600;}header h1{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:34px;margin:4px 0 6px;}header p{color:var(--muted);font-size:14px;margin:0;}
-.search-row{display:flex;gap:8px;margin:18px 0;}select,input{flex:1;background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:10px 12px;font-size:15px;}
-.live-bar{display:flex;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:14px;font-size:13px;color:var(--muted);}
-.live-bar b{color:var(--amber);}
-.player-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px;}
-.player-head h2{font-family:'Barlow Condensed',sans-serif;font-size:24px;margin:0;}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;}
-.stat-cell{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;}
-.stat-cell.label{font-size:12px;color:var(--muted);}.stat-cell.value{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;}
-.view-tabs{display:flex;gap:6px;margin-bottom:18px;}.view-tabs button{flex:1;background:var(--card);border:1px solid var(--line);color:var(--muted);padding:10px;border-radius:8px;font-weight:600;cursor:pointer;}
-.view-tabs button.active{background:var(--amber);color:var(--navy);border-color:var(--amber);}
-.qual-card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:8px;padding:12px 14px;margin-bottom:8px;}
-.rank-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px;}
-.props-list.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;}
-.result{background:var(--card-hi);border:1px solid var(--line);border-radius:10px;padding:18px;}.result.pct{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:56px;color:var(--amber);}
-.bar-track{height:8px;background:var(--line);border-radius:999px;margin-top:14px;overflow:hidden;}.bar-fill{height:100%;background:var(--amber);}
+body{font-family:system-ui;background:#0f1115;color:#fff;padding:12px}
+.card{background:#1c1f26;border-radius:12px;padding:12px;margin:8px 0}
+.small{opacity:.6;font-size:12px}
+.badge{background:#2d5bff;padding:2px 8px;border-radius:20px;font-size:12px}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header><div class="kicker">PLAYER PROPS • PER FIXTURES TODAY</div><h1>Player Stat Model</h1><p id="subtitle">Blended last-10 form + season, Poisson priced.</p></header>
-
-<div class="live-bar"><span><b id="liveCount">0</b> players LIVE ✅ | <b id="teamCount">0</b> teams</span><span id="dateLabel"></span></div>
-
-<div class="view-tabs" id="viewTabs"><button data-view="screener" class="active">Screener</button><button data-view="player">Player</button></div>
-
-<div class="search-row">
-  <select id="teamSelect"><option value="all">All Teams</option></select>
-  <select id="playerSelect"></select>
-</div>
-
-<div id="screenerView"></div>
-<div id="playerView" style="display:none;"><div id="content"></div></div>
-</div>
-
+<h2 id="header">Loading...</h2>
+<div id="list"></div>
 <script>
-let PLAYERS = {}, SCREENER = null, currentPlayer = null;
-const PROP_LABELS = {"shots_over_1.5":"Over 1.5 shots","shots_over_2.5":"Over 2.5 shots","sot_over_0.5":"Over 0.5 SOT","sot_over_1.5":"Over 1.5 SOT","to_be_carded":"To be carded","to_score":"To score","to_assist":"To assist","goal_or_assist":"Goal or assist"};
+fetch('./player_stats_data.json?v='+Date.now())
+.then(r=>r.json())
+.then(data=>{
+  const players = Object.values(data.players||{});
+  const teams = data.teams && data.teams.length>0? data.teams : [...new Set(players.map(p=>p.team_name))];
+  document.getElementById('header').innerHTML = `${players.length} players LIVE | ${teams.length} teams | ${data.generated_at||''}`;
 
-async function loadData(){
-  try{
-    const res = await fetch("player_stats_data.json");
-    if(!res.ok) throw new Error();
-    const raw = await res.json();
-    PLAYERS = raw.players || raw;
-    SCREENER = raw.screener || null;
-    // NEW FORMAT SUPPORT: {total_players, teams, generated_at}
-    if(raw.teams){ document.getElementById("teamCount").textContent = raw.teams.length; }
-    if(raw.generated_at){ document.getElementById("dateLabel").textContent = raw.generated_at; }
-  }catch(e){
-    PLAYERS = {}; // empty if no file
-  }
-  document.getElementById("liveCount").textContent = Object.keys(PLAYERS).length;
-  if(!SCREENER) document.getElementById("teamCount").textContent = new Set(Object.values(PLAYERS).map(p=>p.team_name)).size;
-  populateTeams();
-  populatePlayers();
-  renderScreener();
-}
-
-function populateTeams(){
-  const teams = [...new Set(Object.values(PLAYERS).map(p=>p.team_name))].filter(Boolean).sort();
-  const sel = document.getElementById("teamSelect");
-  sel.innerHTML = '<option value="all">All Teams</option>' + teams.map(t=>`<option value="${t}">${t}</option>`).join("");
-  sel.onchange = () => populatePlayers();
-}
-
-function populatePlayers(){
-  const teamFilter = document.getElementById("teamSelect").value;
-  const sel = document.getElementById("playerSelect");
-  let list = Object.keys(PLAYERS);
-  if(teamFilter!== "all") list = list.filter(n=>PLAYERS[n].team_name===teamFilter);
-  sel.innerHTML = list.map(n=>`<option value="${n}">${n}</option>`).join("");
-  currentPlayer = PLAYERS[list[0]];
-  sel.onchange = () => { currentPlayer = PLAYERS[sel.value]; renderPlayer(); };
-  renderPlayer();
-}
-
-function renderScreener(){
-  const el = document.getElementById("screenerView");
-  const teamFilter = document.getElementById("teamSelect").value;
-  let reports = Object.values(PLAYERS);
-  if(teamFilter!== "all") reports = reports.filter(r=>r.team_name===teamFilter);
-
-  if(!reports.length){ el.innerHTML = `<div style="text-align:center;color:#8593A8;padding:40px;">No players for today. Run watchlist scan mode 2.</div>`; return; }
-
-  // Qualifiers per your thresholds
-  const qualifying = reports.filter(r=> (r.criteria_hit||[]).length>0).sort((a,b)=> Math.max(...Object.values(b.props)) - Math.max(...Object.values(a.props)));
-  const byMarket = {};
-  Object.keys(reports[0]?.props||{}).forEach(m=>{ byMarket[m]=[...reports].sort((a,b)=>b.props[m]-a.props[m]).slice(0,5); });
-
-  el.innerHTML = `
-    <h3 style="font-family:'Barlow Condensed';margin:0 0 10px;">Meets criteria (${qualifying.length})</h3>
-    ${qualifying.map(p=>`<div class="qual-card"><b>${p.player_name}</b><br><small>${p.team_name} • ${p.expected_minutes}' • ${p.rolling_matches_used} games form</small><div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;">${(p.criteria_hit||[]).map(k=>`<span style="background:#1D2E48;border:1px solid #2A3A54;border-radius:999px;padding:3px 9px;font-size:12px;color:#4FA8A0;">${PROP_LABELS[k]} ${(p.props[k]*100).toFixed(0)}%</span>`).join("")}</div></div>`).join("")}
-    <div style="margin-top:18px;">${Object.entries(byMarket).map(([m,arr])=>`<div style="margin-bottom:16px;"><h4 style="margin:0 0 8px;">${PROP_LABELS[m]||m}</h4>${arr.map((r,i)=>`<div class="rank-row"><span>${i+1}. ${r.player_name} <small style="color:#8593A8;">${r.team_name}</small></span><b style="color:#E3A542;">${(r.props[m]*100).toFixed(1)}%</b></div>`).join("")}</div>`).join("")}</div>
-  `;
-}
-
-function renderPlayer(){
-  const el = document.getElementById("content");
-  const view = document.getElementById("playerView");
-  if(!currentPlayer){ el.innerHTML=""; return; }
-  const p = currentPlayer;
-  el.innerHTML = `
-    <div class="player-head"><h2>${p.player_name}</h2><small style="color:#8593A8;">${p.team_name} • ~${p.expected_minutes}'</small></div>
-    <div class="stat-grid">
-      <div class="stat-cell"><div class="label">Shots / match</div><div class="value">${(p.projected_per_match?.shots||0).toFixed(2)}</div></div>
-      <div class="stat-cell"><div class="label">SOT / match</div><div class="value">${(p.projected_per_match?.shots_on_target||0).toFixed(2)}</div></div>
-      <div class="stat-cell"><div class="label">Cards / match</div><div class="value">${(p.projected_per_match?.cards||0).toFixed(2)}</div></div>
-      <div class="stat-cell"><div class="label">G+A / match</div><div class="value">${((p.projected_per_match?.goals||0)+(p.projected_per_match?.assists||0)).toFixed(2)}</div></div>
-    </div>
-    <div class="result"><div class="pct">${(p.props?.goal_or_assist*100||0).toFixed(1)}%</div><div style="color:#8593A8;font-size:13px;">Goal or assist (best prop)</div><div class="bar-track"><div class="bar-fill" style="width:${(p.props?.goal_or_assist*100||0)}%"></div></div></div>
-    <div class="props-list" style="margin-top:16px;">${Object.entries(p.props||{}).map(([k,v])=>`<div class="row"><span>${PROP_LABELS[k]||k}</span><b style="color:#E3A542;">${(v*100).toFixed(1)}%</b></div>`).join("")}</div>
-  `;
-}
-
-document.querySelectorAll("#viewTabs button").forEach(btn=>btn.onclick=()=>{
-  document.querySelectorAll("#viewTabs button").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  document.getElementById("screenerView").style.display = btn.dataset.view==="screener"?"block":"none";
-  document.getElementById("playerView").style.display = btn.dataset.view==="player"?"block":"none";
-  if(btn.dataset.view==="screener") renderScreener(); else renderPlayer();
-});
-
-loadData();
+  document.getElementById('list').innerHTML = players.map(p=>{
+    // skip fake identical stats
+    const isFake = p.projected_per_match && p.projected_per_match.shots===0.75;
+    return `<div class="card">
+      <b>${p.player_name}</b> <span class="badge">${p.team_name}</span>
+      <div class="small">${p.expected_minutes}' • ${p.season_minutes||p.matches_used||0} mins season • ${p.matches_used||0} games</div>
+      <div>Shots O1.5: ${(p.props.shots_over_1_5||p.props.shots_over_1_5===0)? (p.props.shots_over_1_5*100).toFixed(0)+'%': ((p.props.shots_over_1_5||p.props['shots_over_1.5']||0)*100).toFixed(0)+'%'} ${isFake?'<span style="color:red">(FAKE DATA - API empty)</span>':''}</div>
+      <div>SOT O0.5: ${((p.props.sot_over_0_5||p.props['sot_over_0.5']||0)*100).toFixed(0)}% • Card: ${((p.props.to_be_carded||0)*100).toFixed(0)}%</div>
+      <div>Goal/Assist: ${((p.props.goal_or_assist||0)*100).toFixed(0)}%</div>
+      <div class="small">proj: ${JSON.stringify(p.projected_per_match)}</div>
+    </div>`;
+  }).join('');
+}).catch(e=>document.getElementById('header').innerText='Error: '+e+' - player_stats_data.json not found in docs/');
 </script>
 </body>
 </html>
