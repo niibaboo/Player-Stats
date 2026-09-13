@@ -3,32 +3,46 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - run: pip install requests
+
       - name: Run model
         env:
           THESTATSAPI_KEY: ${{ secrets.THESTATSAPI_KEY }}
         run: python player_stat_model.py
+
       - name: Commit data
         run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
-          git add docs/player_stats_data.json
-          git commit -m "update data" || true
+          git add docs/player_stats_data.json || true
+          git commit -m "update data [skip ci]" || true
           git push || true
+
       - uses: actions/configure-pages@v4
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: './docs'
-      - uses: actions/deploy-pages@v4
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
