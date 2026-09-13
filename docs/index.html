@@ -1,29 +1,106 @@
 <!doctype html>
-<html><head><meta name=viewport content="width=device-width,initial-scale=1"><title>Player Stats</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Player Stat Model</title>
 <style>
-body{background:#0f1a2a;color:#fff;font-family:-apple-system,sans-serif;padding:16px;margin:0}
-.card{background:#14233a;padding:14px;margin:10px 0;border-radius:12px;border:1px solid #1e3a5a}
-.badge{background:#1e4a7a;padding:2px 8px;border-radius:6px;font-size:12px}
-</style></head><body>
-<h2 style="text-align:center">⚽ 26 Players - FIXED ✅</h2>
-<div id=list>Loading...</div>
+:root{--bg:#f5f2eb;--card:#162a44;--gold:#e9a840;--pill:#1a3a5a;--text:#0f1a2a}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);font-family:-apple-system,Inter,sans-serif;color:var(--text)}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+.kicker{color:#2a9d8f;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:12px 2px 6px}
+h1{margin:0 0 8px;font-size:28px}.sub{color:#667085;font-size:14px;line-height:1.4;margin-bottom:16px}
+.tabs{display:flex;gap:10px;margin:16px 0}
+.tab{flex:1;padding:12px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+.tab.active{background:var(--gold);color:#111}.tab.inactive{background:var(--card);color:#fff}
+.section-title{font-size:13px;color:#98a2b3;margin:18px 0 8px}
+.card{background:var(--card);color:#fff;border-radius:12px;padding:14px;margin:10px 0;border-left:4px solid var(--gold)}
+.card b{font-size:16px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill{background:var(--pill);border:1px solid #2a4a6a;color:#8ab4ff;padding:6px 10px;border-radius:999px;font-size:12px}
+.pill.gold{color:#f0c56a}
+.row{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid #e5ddd0;font-size:14px}
+.row b{color:#b7791f}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 4px}
+#status{font-size:12px;color:#667085}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="header"><span class="kicker">PLAYER PROPS</span><span id="status"></span></div>
+<h1>Player Stat Model</h1>
+<div class="sub">Blended last-10-match form and full-season rates, priced with a Poisson model for shots, cards, goals and assists.</div>
+
+<div class="tabs">
+<button id="tS" class="tab active" onclick="setTab('screener')">Screener</button>
+<button id="tP" class="tab inactive" onclick="setTab('player')">Player</button>
+</div>
+
+<div id="view-screener">
+<div class="section-title">Scan generated sample data — <span id="count">loading</span> players</div>
+<div id="meets"></div>
+<div id="lists"></div>
+</div>
+
+<div id="view-player" style="display:none">
+<div id="playerList"></div>
+</div>
+</div>
+
 <script>
+let DATA=null;
+function safeVal(props, keys){ for(let k of keys){ if(props[k]!=null) return props[k]; for(let real in props){ if(real.toLowerCase().replace(/[^a-z0-9]/g,'')===k.toLowerCase().replace(/[^a-z0-9]/g,'')) return props[real]; } } return 0; }
+function pct(v){ return Math.round((v||0)*100); }
+
+function setTab(t){
+ document.getElementById('tS').className='tab '+(t==='screener'?'active':'inactive');
+ document.getElementById('tP').className='tab '+(t==='player'?'active':'inactive');
+ document.getElementById('view-screener').style.display=t==='screener'?'block':'none';
+ document.getElementById('view-player').style.display=t==='player'?'block':'none';
+}
+
 fetch('https://niibaboo.github.io/Player-Stats/player_stats_data.json?'+Date.now())
-.then(r=>r.json()).then(d=>{
-  const players=Object.values(d.players||{}).sort((a,b)=>(b.expected_minutes||0)-(a.expected_minutes||0));
-  let h='';
-  players.forEach(p=>{
-    const pr=p.props||{};
-    const s15 = pr['shots_over_1.5']||pr.shots_over_1_5||0;
-    const sot = pr['sot_over_0.5']||pr.sot_over_0_5||0;
-    let ga=0; for(let k in pr){ if(k.includes('goal')) ga=pr[k]; }
-    h+=`<div class=card><b>${p.player_name}</b> - ${p.team_name} <span class=badge>${p.expected_minutes}m</span><br>
-    <span style="color:#8ab4ff">Over 1.5 Shots: ${Math.round(s15*100)}%</span> |
-    SOT 0.5: ${Math.round(sot*100)}% |
-    G/A: ${Math.round(ga*100)}%<br>
-    <small>Pos: ${p.position} | Criteria: ${(p.criteria_hit||[]).join(', ')}</small></div>`;
-  });
-  document.getElementById('list').innerHTML=h;
-});
+.then(r=>{ document.getElementById('status').innerText='STATUS '+r.status; return r.json(); })
+.then(d=>{
+ DATA=d; const players=Object.values(d.players||{}).sort((a,b)=>(b.expected_minutes||0)-(a.expected_minutes||0));
+ document.getElementById('count').innerText=players.length;
+ document.getElementById('status').innerText=players.length+' players LIVE ✅';
+
+ // Meets criteria cards (like screenshot Sample Forward)
+ let meetsHtml='';
+ players.slice(0,8).forEach(p=>{
+   const pr=p.props||{};
+   const s15=safeVal(pr,['shots_over_1.5','shots_over_1_5','shots_over_1']);
+   const sot=safeVal(pr,['sot_over_0.5','sot_over_0_5']);
+   const ga=safeVal(pr,['goal_or_assist','goal or assist','goal_or_assist']);
+   const card=safeVal(pr,['to_be_carded','card']);
+   const pills=[];
+   if(pct(s15)>=15) pills.push(`Over 1.5 shots · ${pct(s15)}%`);
+   if(pct(sot)>=15) pills.push(`Over 0.5 shots on target · ${pct(sot)}%`);
+   if(pct(ga)>=15) pills.push(`Goal or assist · ${pct(ga)}%`);
+   if(pct(card)>=15) pills.push(`To be carded · ${pct(card)}%`);
+   if(!pills.length) return;
+   meetsHtml+=`<div class="card"><b>${p.player_name}</b> <small style="opacity:.7">- ${p.team_name} ${p.expected_minutes}m</small><div class="pills">${pills.map(x=>`<span class="pill">${x}</span>`).join('')}</div></div>`;
+ });
+ document.getElementById('meets').innerHTML=meetsHtml || '<div class="section-title">No criteria met with current thresholds</div>';
+
+ // Ranked lists like screenshot
+ const byS15=[...players].sort((a,b)=>safeVal(b.props||{},['shots_over_1.5'])-safeVal(a.props||{},['shots_over_1.5']));
+ const bySOT=[...players].sort((a,b)=>safeVal(b.props||{},['sot_over_0.5'])-safeVal(a.props||{},['sot_over_0.5']));
+ let lists='';
+ function renderList(title, arr, key){ let h=`<div class="section-title">${title}</div>`; arr.slice(0,10).forEach((p,i)=>{ h+=`<div class="row"><span>${i+1} ${p.player_name}</span><b>${pct(safeVal(p.props||{},[key]))}.0%</b></div>` }); return h; }
+ lists+=renderList('Over 1.5 shots',byS15,'shots_over_1.5');
+ lists+=renderList('Over 0.5 shots on target',bySOT,'sot_over_0.5');
+ document.getElementById('lists').innerHTML=lists;
+
+ // Player tab
+ let pHtml='';
+ players.forEach(p=>{
+   const pr=p.props||{};
+   pHtml+=`<div class="card"><b>${p.player_name}</b> - ${p.team_name} ${p.expected_minutes}m<br><small>${p.position||p.pos||''} | ${(p.criteria_hit||[]).join(', ')}</small></div>`;
+ });
+ document.getElementById('playerList').innerHTML=pHtml;
+}).catch(e=>{ document.getElementById('status').innerText='FAIL '+e; document.getElementById('status').style.color='red'; });
 </script>
-</body></html>
+</body>
+</html>
