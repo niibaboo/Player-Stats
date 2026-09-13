@@ -1,5 +1,6 @@
 """
-Player Stat Model V5 LITE - fixes 429 + 0 starters
+Player Stat Model V5 LITE - FINAL with docs/ fix
+Saves to docs/ so Pages keeps it
 """
 
 import os
@@ -18,15 +19,15 @@ BASE_URL = "https://api.thestatsapi.com/api/football"
 
 CACHE_DIR = Path(__file__).parent / "cache"
 CACHE_DIR.mkdir(exist_ok=True)
-OUTPUT_JSON = Path(__file__).parent / "player_stats_data.json"
+OUTPUT_JSON = Path(__file__).parent / "docs" / "player_stats_data.json"
+OUTPUT_JSON.parent.mkdir(exist_ok=True)
 
 ROLLING_WEIGHT = 0.6
-ROLLING_MATCHES = 3 # was 10 -> now 3 to save 70% quota
-USE_ROLLING = False # set True after your quota resets on 15/09
+ROLLING_MATCHES = 3
+USE_ROLLING = False
 
-WATCHLIST = ["Arsenal"] # keep 1 team until 15/09
-
-MIN_AVG_MINUTES = 0 # was 30 - was filtering everyone to 0
+WATCHLIST = ["Arsenal"]
+MIN_AVG_MINUTES = 0
 
 CRITERIA_THRESHOLDS = {
     "shots_over_1.5": 0.65,
@@ -45,17 +46,15 @@ def _cache_path(key: str) -> Path:
 def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> dict:
     cache_key = path + json.dumps(params or {}, sort_keys=True)
     cfile = _cache_path(cache_key)
-    # ALWAYS use cache if exists - this is how we stay under 10k
     if cfile.exists():
         try:
             return json.loads(cfile.read_text())
         except:
             pass
-
     for attempt in range(3):
         resp = requests.get(f"{BASE_URL}{path}", headers=HEADERS, params=params, timeout=25)
         if resp.status_code == 429:
-            print(f" 429 on {path}, waiting 20s... (quota saver)")
+            print(f" 429 on {path}, waiting 20s...")
             time.sleep(20)
             continue
         if resp.status_code == 400:
@@ -69,7 +68,7 @@ def cached_get(path: str, params: dict | None = None, ttl_hours: int = 12) -> di
             continue
         data = resp.json()
         cfile.write_text(json.dumps(data))
-        time.sleep(2.2) # 2.2 sec = 27 req/min = under 30/min limit
+        time.sleep(2.2)
         return data
     raise Exception(f"Rate limit giving up on {path}")
 
@@ -186,7 +185,7 @@ def estimate_expected_minutes(profile: dict) -> float:
         return 75.0
     if apps >= 1:
         return 45.0
-    return 70.0 # default for unknown
+    return 70.0
 
 def build_report(player: dict, profile: dict, team_id: str, expected_minutes: float) -> dict:
     player_id = player["id"]
@@ -283,10 +282,5 @@ if __name__ == "__main__":
     if API_KEY == "PASTE_YOUR_KEY_HERE":
         print("Set THESTATSAPI_KEY env var")
         raise SystemExit(1)
-    if os.getenv("GITHUB_ACTIONS") or not sys.stdin.isatty():
-        print("CI detected - auto-running watchlist scan (mode 2)")
-        choice="2"
-    else:
-        choice="2"
-    if choice=="2":
-        run_scan(run_watchlist_scan())
+    print("CI detected - auto-running watchlist scan (mode 2)")
+    run_scan(run_watchlist_scan())
