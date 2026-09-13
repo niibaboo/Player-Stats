@@ -1,30 +1,42 @@
 name: Player Model
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 6 * * *' # daily 6:15am
+    - cron: '0 6 * * *' # runs daily 6am
+  push:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install requests pandas numpy
+      
+      - name: Install deps
+        run: pip install requests pandas numpy
+      
       - name: Run model
-        run: python player_stat_model.py
         env:
           THESTATSAPI_KEY: ${{ secrets.STATS_API_KEY }}
-      - name: Deploy to Pages
         run: |
+          echo "2" | python player_stat_model.py
           mkdir -p docs
-          cp player_stat_model.html docs/index.html
-          # if your .py also generates a json/data file, copy it too:
-          # cp players.json docs/ 2>/dev/null || true
-          git config user.name "bot"
-          git config user.email "bot@bot.com"
-          git add docs/
-          git diff --staged --quiet || git commit -m "player model build"
-          git push
+          touch docs/.nojekyll
+          # whatever your script outputs, copy to docs/index.html
+          if [ -f "player_stat_model.html" ]; then cp player_stat_model.html docs/index.html; fi
+          if [ -f "index.html" ] && [ ! -f "docs/index.html" ]; then cp index.html docs/index.html; fi
+          ls -lh docs/
+      
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
