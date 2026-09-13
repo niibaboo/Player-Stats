@@ -16,7 +16,7 @@ jobs:
       - name: Run model
         run: python player_stat_model.py
         env:
-          STATS_API_KEY: ${{ secrets.STATS_API_KEY }}
+          THESTATSAPI_KEY: ${{ secrets.STATS_API_KEY }}
       - name: Deploy to Pages
         run: |
           mkdir -p docs
