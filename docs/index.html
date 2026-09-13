@@ -1,39 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Player Stats LIVE</title>
-<style>
-body{font-family:system-ui;background:#0f1115;color:#fff;padding:12px}
-.card{background:#1c1f26;border-radius:12px;padding:12px;margin:8px 0}
-.small{opacity:.6;font-size:12px}
-.badge{background:#2d5bff;padding:2px 8px;border-radius:20px;font-size:12px}
-</style>
-</head>
-<body>
-<h2 id="header">Loading...</h2>
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Player Stat Model</title>
+<style>body{background:#0b1220;color:#fff;font-family:system-ui;padding:14px}.top{background:#142040;border-radius:12px;padding:12px;margin-bottom:12px}.card{background:#121a2e;border-left:3px solid #f5b301;border-radius:10px;padding:12px;margin:10px 0}.pill{display:inline-block;border:1px solid #2a5a7a;color:#6fb7ff;border-radius:20px;padding:4px 10px;margin:4px;font-size:13px} select{background:#1a2744;color:#fff;border:1px solid #334;padding:8px;border-radius:8px;width:48%} </style>
+</head><body>
+<h2>Player Stat Model</h2>
+<div class="small" style="opacity:.7">Blended last-10 form + season, Poisson priced.</div>
+<div class="top" id="hdr">Loading...</div>
+<div style="display:flex;gap:8px;margin:10px 0"><select id="teamSel"></select><select id="playerSel"></select></div>
 <div id="list"></div>
 <script>
-fetch('./player_stats_data.json?v='+Date.now())
-.then(r=>r.json())
-.then(data=>{
-  const players = Object.values(data.players||{});
-  const teams = data.teams && data.teams.length>0? data.teams : [...new Set(players.map(p=>p.team_name))];
-  document.getElementById('header').innerHTML = `${players.length} players LIVE | ${teams.length} teams | ${data.generated_at||''}`;
-
-  document.getElementById('list').innerHTML = players.map(p=>{
-    // skip fake identical stats
-    const isFake = p.projected_per_match && p.projected_per_match.shots===0.75;
-    return `<div class="card">
-      <b>${p.player_name}</b> <span class="badge">${p.team_name}</span>
-      <div class="small">${p.expected_minutes}' • ${p.season_minutes||p.matches_used||0} mins season • ${p.matches_used||0} games</div>
-      <div>Shots O1.5: ${(p.props.shots_over_1_5||p.props.shots_over_1_5===0)? (p.props.shots_over_1_5*100).toFixed(0)+'%': ((p.props.shots_over_1_5||p.props['shots_over_1.5']||0)*100).toFixed(0)+'%'} ${isFake?'<span style="color:red">(FAKE DATA - API empty)</span>':''}</div>
-      <div>SOT O0.5: ${((p.props.sot_over_0_5||p.props['sot_over_0.5']||0)*100).toFixed(0)}% • Card: ${((p.props.to_be_carded||0)*100).toFixed(0)}%</div>
-      <div>Goal/Assist: ${((p.props.goal_or_assist||0)*100).toFixed(0)}%</div>
-      <div class="small">proj: ${JSON.stringify(p.projected_per_match)}</div>
-    </div>`;
-  }).join('');
-}).catch(e=>document.getElementById('header').innerText='Error: '+e+' - player_stats_data.json not found in docs/');
-</script>
-</body>
-</html>
+fetch('./player_stats_data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
+ const players=Object.values(d.players||{}).sort((a,b)=>b.props.goal_or_assist-a.props.goal_or_assist);
+ const teams=[...new Set(players.map(p=>p.team_name))];
+ document.getElementById('hdr').innerHTML=`<b style="color:#f5b301">${players.length}</b> players LIVE ✅ | <b style="color:#f5b301">${teams.length}</b> teams`;
+ document.getElementById('teamSel').innerHTML='<option>All Teams</option>'+teams.map(t=>`<option>${t}</option>`).join('');
+ document.getElementById('playerSel').innerHTML=players.map(p=>`<option>${p.player_name}</option>`).join('');
+ function render(filterTeam){
+   let list=players; if(filterTeam&&filterTeam!=='All Teams') list=players.filter(p=>p.team_name===filterTeam);
+   document.getElementById('list').innerHTML=list.map(p=>{
+     const m=p.matches_used??p.rolling_matches_used??p.season_minutes??0;
+     const exp=p.expected_minutes??45;
+     const pr=p.props||{};
+     const s15=((pr.shots_over_1_5??pr['shots_over_1.5']??0)*100).toFixed(0);
+     const sot=((pr.sot_over_0_5??pr['sot_over_0.5']??0)*100).toFixed(0);
+     const card=((pr.to_be_carded??0)*100).toFixed(0);
+     const ga=((pr.goal_or_assist??0)*100).toFixed(0);
+     return `<div class="card"><b>${p.player_name}</b><div style="opacity:.7;font-size:13px">${p.team_name} • ${exp}' • ${m} games form</div>
+     <div><span class="pill">Over 1.5 shots ${s15}%</span><span class="pill">Over 0.5 SOT ${sot}%</span></div>
+     <div><span class="pill">To be carded ${card}%</span><span class="pill">Goal or assist ${ga}%</span></div></div>`;
+   }).join('');
+ }
+ render(); document.getElementById('teamSel').onchange=e=>render(e.target.value);
+}).catch(e=>document.getElementById('hdr').innerText='Need player_stats_data.json in docs/ - '+e);
+</script></body></html>
