@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Stat Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101B2D;
+    --card:#16233A;
+    --card-hi:#1D2E48;
+    --line:#2A3A54;
+    --amber:#E3A542;
+    --teal:#4FA8A0;
+    --text:#ECEEF1;
+    --muted:#8593A8;
+    --bad:#D9695C;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--navy);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  .wrap{max-width:480px;margin:0 auto;padding:20px 16px 48px;}
+
+  header{margin-bottom:20px;}
+  header .kicker{color:var(--teal);font-size:13px;font-weight:600;letter-spacing:0.02em;}
+  header h1{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    font-size:34px;
+    line-height:1.05;
+    margin:4px 0 6px;
+  }
+  header p{color:var(--muted);font-size:14px;margin:0;line-height:1.5;}
+
+  .search-row{display:flex;gap:8px;margin:18px 0;}
+  select, input[type=text], input[type=number]{
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--text);
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:15px;
+    font-family:inherit;
+  }
+  select{flex:1;}
+  select:focus, input:focus{outline:2px solid var(--amber);outline-offset:1px;}
+
+  .player-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    padding-bottom:10px;
+    margin-bottom:14px;
+  }
+  .player-head h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:600;
+    font-size:24px;
+    margin:0;
+  }
+  .player-head .form-tag{
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  .stat-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-bottom:18px;
+  }
+  .stat-cell{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:10px 12px;
+  }
+  .stat-cell .label{font-size:12px;color:var(--muted);margin-bottom:2px;}
+  .stat-cell .value{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    font-size:22px;
+  }
+
+  .market-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+  .market-tabs button{
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--muted);
+    padding:8px 12px;
+    border-radius:999px;
+    font-size:13px;
+    font-family:inherit;
+    cursor:pointer;
+  }
+  .market-tabs button.active{
+    background:var(--amber);
+    border-color:var(--amber);
+    color:var(--navy);
+    font-weight:600;
+  }
+
+  .line-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+  .line-row label{font-size:13px;color:var(--muted);white-space:nowrap;}
+  .line-row input{width:80px;}
+
+  .result{
+    background:var(--card-hi);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px;
+  }
+  .result .pct{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    font-size:56px;
+    line-height:1;
+    color:var(--amber);
+  }
+  .result .pct.low{color:var(--bad);}
+  .result .desc{font-size:14px;color:var(--muted);margin-top:6px;}
+  .bar-track{
+    height:8px;
+    background:var(--line);
+    border-radius:999px;
+    margin-top:14px;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height:100%;
+    background:var(--amber);
+    border-radius:999px;
+    transition:width .3s ease;
+  }
+
+  .props-list{margin-top:16px;}
+  .props-list .row{
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0;
+    border-bottom:1px solid var(--line);
+    font-size:14px;
+  }
+  .props-list .row:last-child{border-bottom:none;}
+  .props-list .row .name{color:var(--text);}
+  .props-list .row .pct{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    color:var(--amber);
+  }
+
+  .view-tabs{display:flex;gap:6px;margin-bottom:18px;}
+  .view-tabs button{
+    flex:1;
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--muted);
+    padding:10px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+    font-family:inherit;
+    cursor:pointer;
+  }
+  .view-tabs button.active{
+    background:var(--amber);
+    border-color:var(--amber);
+    color:var(--navy);
+  }
+
+  .screener-meta{color:var(--muted);font-size:13px;margin-bottom:14px;}
+
+  .qual-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--amber);
+    border-radius:8px;
+    padding:12px 14px;
+    margin-bottom:8px;
+  }
+  .qual-card .name{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:600;
+    font-size:18px;
+  }
+  .qual-card .hits{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:6px;
+  }
+  .qual-card .hit-pill{
+    background:var(--card-hi);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:3px 9px;
+    font-size:12px;
+    color:var(--teal);
+  }
+
+  .market-section{margin-bottom:20px;}
+  .market-section h3{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:600;
+    font-size:17px;
+    margin:0 0 8px;
+    color:var(--text);
+  }
+  .rank-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:7px 0;
+    border-bottom:1px solid var(--line);
+    font-size:14px;
+  }
+  .rank-row:last-child{border-bottom:none;}
+  .rank-row .pos{color:var(--muted);width:20px;font-size:13px;}
+  .rank-row .pct{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:600;
+    color:var(--amber);
+  }
+
+  .empty, .note{
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+    padding:40px 12px;
+    line-height:1.6;
+  }
+  .note{padding:12px 0 0;text-align:left;}
+  .note code{
+    background:var(--card);
+    padding:1px 5px;
+    border-radius:4px;
+    font-size:12px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">PLAYER PROPS</div>
+    <h1>Player Stat Model</h1>
+    <p>Blended last-10-match form and full-season rates, priced with a Poisson model for shots, cards, goals and assists.</p>
+  </header>
+
+  <div class="view-tabs" id="viewTabs">
+    <button data-view="screener" class="active">Screener</button>
+    <button data-view="player">Player</button>
+  </div>
+
+  <div id="screenerView"></div>
+
+  <div id="playerView" style="display:none;">
+    <div class="search-row">
+      <select id="playerSelect"></select>
+    </div>
+    <div id="content"></div>
+  </div>
+
+  <p class="note">
+    Loads <code>player_stats_data.json</code>, generated by <code>player_stat_model.py</code>.
+    Host both files together (e.g. on GitHub Pages) or open this file from the same
+    folder as the JSON. Showing sample data until that file is found.
+  </p>
+
+</div>
+
+<script>
+// ---- Sample data so the app is usable standalone before you wire up live JSON ----
+const SAMPLE_PLAYERS = {
+  "Sample Forward": {
+    player_name: "Sample Forward",
+    rolling_matches_used: 8,
+    expected_minutes: 90,
+    projected_per_match: { shots: 3.1, shots_on_target: 1.4, cards: 0.22, goals: 0.61, assists: 0.24 },
+    props: {
+      "shots_over_1.5": 0.79, "shots_over_2.5": 0.53,
+      "sot_over_0.5": 0.72, "sot_over_1.5": 0.34,
+      "to_be_carded": 0.20, "to_score": 0.46,
+      "to_assist": 0.22, "goal_or_assist": 0.58
+    },
+    criteria_hit: ["shots_over_1.5", "sot_over_0.5", "goal_or_assist"]
+  },
+  "Sample Winger": {
+    player_name: "Sample Winger",
+    rolling_matches_used: 9,
+    expected_minutes: 85,
+    projected_per_match: { shots: 2.2, shots_on_target: 0.9, cards: 0.15, goals: 0.28, assists: 0.35 },
+    props: {
+      "shots_over_1.5": 0.56, "shots_over_2.5": 0.27,
+      "sot_over_0.5": 0.54, "sot_over_1.5": 0.15,
+      "to_be_carded": 0.14, "to_score": 0.24,
+      "to_assist": 0.30, "goal_or_assist": 0.46
+    }
+  },
+  "Sample Fullback": {
+    player_name: "Sample Fullback",
+    rolling_matches_used: 10,
+    expected_minutes: 90,
+    projected_per_match: { shots: 0.7, shots_on_target: 0.2, cards: 0.28, goals: 0.03, assists: 0.09 },
+    props: {
+      "shots_over_1.5": 0.09, "shots_over_2.5": 0.02,
+      "sot_over_0.5": 0.18, "sot_over_1.5": 0.02,
+      "to_be_carded": 0.24, "to_score": 0.03,
+      "to_assist": 0.09, "goal_or_assist": 0.11
+    },
+    criteria_hit: ["to_be_carded"]
+  }
+};
+
+const SAMPLE_SCREENER = {
+  generated_at: "sample data",
+  qualifying: ["Sample Forward", "Sample Fullback"],
+  top_by_market: {
+    "shots_over_1.5": ["Sample Forward", "Sample Winger", "Sample Fullback"],
+    "sot_over_0.5": ["Sample Forward", "Sample Winger", "Sample Fullback"],
+    "to_be_carded": ["Sample Fullback", "Sample Forward", "Sample Winger"],
+    "goal_or_assist": ["Sample Forward", "Sample Winger", "Sample Fullback"]
+  }
+};
+
+const PROP_LABELS = {
+  "shots_over_1.5": "Over 1.5 shots",
+  "shots_over_2.5": "Over 2.5 shots",
+  "sot_over_0.5": "Over 0.5 shots on target",
+  "sot_over_1.5": "Over 1.5 shots on target",
+  "to_be_carded": "To be carded",
+  "to_score": "To score",
+  "to_assist": "To assist",
+  "goal_or_assist": "Goal or assist"
+};
+
+let PLAYERS = null;
+let SCREENER = null;
+let currentPlayer = null;
+let currentMarket = "shots";
+let currentView = "screener";
+
+const MARKETS = [
+  { key: "shots", label: "Shots" },
+  { key: "shots_on_target", label: "Shots on Target" },
+  { key: "cards", label: "Cards" },
+  { key: "goals", label: "Goals + Assists" }
+];
+
+function poissonPmf(k, lam) {
+  if (lam <= 0) return k === 0 ? 1 : 0;
+  let fact = 1;
+  for (let i = 2; i <= k; i++) fact *= i;
+  return Math.exp(-lam) * Math.pow(lam, k) / fact;
+}
+function probOver(lam, line) {
+  const threshold = Math.floor(line) + 1;
+  let cum = 0;
+  for (let k = 0; k < threshold; k++) cum += poissonPmf(k, lam);
+  return 1 - cum;
+}
+function probAtLeastOne(lam) { return 1 - poissonPmf(0, lam); }
+
+async function loadData() {
+  try {
+    const res = await fetch("player_stats_data.json");
+    if (!res.ok) throw new Error("not found");
+    const raw = await res.json();
+    // Support both the current {players, screener} shape and a flat
+    // {name: report, ...} shape from an older run of the script.
+    PLAYERS = raw.players || raw;
+    SCREENER = raw.screener || null;
+  } catch (e) {
+    PLAYERS = SAMPLE_PLAYERS;
+    SCREENER = SAMPLE_SCREENER;
+  }
+  setupViewTabs();
+  populatePlayerSelect();
+  renderScreener();
+  switchView(SCREENER ? "screener" : "player");
+}
+
+function setupViewTabs() {
+  document.querySelectorAll("#viewTabs button").forEach(btn => {
+    btn.addEventListener("click", () => switchView(btn.dataset.view));
+  });
+}
+
+function switchView(view) {
+  currentView = view;
+  document.querySelectorAll("#viewTabs button").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.view === view);
+  });
+  document.getElementById("screenerView").style.display = view === "screener" ? "block" : "none";
+  document.getElementById("playerView").style.display = view === "player" ? "block" : "none";
+}
+
+function renderScreener() {
+  const el = document.getElementById("screenerView");
+  if (!SCREENER) {
+    el.innerHTML = `<div class="empty">No scan results yet. Run the Python script in watchlist or competition scan mode to populate this.</div>`;
+    return;
+  }
+
+  const qualifyingHtml = SCREENER.qualifying.length
+    ? SCREENER.qualifying.map(name => {
+        const p = PLAYERS[name];
+        if (!p) return "";
+        const hits = (p.criteria_hit || []).map(key =>
+          `<span class="hit-pill">${PROP_LABELS[key] || key} · ${(p.props[key]*100).toFixed(0)}%</span>`
+        ).join("");
+        return `<div class="qual-card"><div class="name">${name}</div><div class="hits">${hits}</div></div>`;
+      }).join("")
+    : `<div class="empty">No players cleared a threshold this scan.</div>`;
+
+  const marketsHtml = Object.entries(SCREENER.top_by_market || {}).map(([market, names]) => `
+    <div class="market-section">
+      <h3>${PROP_LABELS[market] || market}</h3>
+      ${names.map((name, i) => {
+        const p = PLAYERS[name];
+        if (!p) return "";
+        return `<div class="rank-row"><span><span class="pos">${i+1}</span>${name}</span><span class="pct">${(p.props[market]*100).toFixed(1)}%</span></div>`;
+      }).join("")}
+    </div>
+  `).join("");
+
+  el.innerHTML = `
+    <div class="screener-meta">Scan generated ${SCREENER.generated_at}</div>
+    <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:18px;margin:0 0 10px;">Meets criteria</h3>
+    ${qualifyingHtml}
+    <div style="height:8px;"></div>
+    ${marketsHtml}
+  `;
+}
+
+function populatePlayerSelect() {
+  const sel = document.getElementById("playerSelect");
+  sel.innerHTML = "";
+  Object.keys(PLAYERS).forEach((name) => {
+    const opt = document.createElement("option");
+    opt.value = name;
+    opt.textContent = name;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener("change", () => {
+    currentPlayer = PLAYERS[sel.value];
+    render();
+  });
+  currentPlayer = PLAYERS[Object.keys(PLAYERS)[0]];
+  render();
+}
+
+function render() {
+  const el = document.getElementById("content");
+  if (!currentPlayer) {
+    el.innerHTML = '<div class="empty">No player data loaded yet.</div>';
+    return;
+  }
+  const p = currentPlayer;
+
+  el.innerHTML = `
+    <div class="player-head">
+      <h2>${p.player_name}</h2>
+      <div class="form-tag">${p.rolling_matches_used}-match form · ~${p.expected_minutes}' expected</div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="label">Shots / match</div><div class="value">${p.projected_per_match.shots.toFixed(2)}</div></div>
+      <div class="stat-cell"><div class="label">On target / match</div><div class="value">${p.projected_per_match.shots_on_target.toFixed(2)}</div></div>
+      <div class="stat-cell"><div class="label">Cards / match</div><div class="value">${p.projected_per_match.cards.toFixed(2)}</div></div>
+      <div class="stat-cell"><div class="label">Goals+Assists / match</div><div class="value">${(p.projected_per_match.goals + p.projected_per_match.assists).toFixed(2)}</div></div>
+    </div>
+
+    <div class="market-tabs" id="marketTabs"></div>
+    <div id="lineControl"></div>
+    <div class="result" id="result"></div>
+
+    <div class="props-list">
+      ${Object.entries(p.props).map(([key, prob]) => `
+        <div class="row">
+          <span class="name">${PROP_LABELS[key] || key}</span>
+          <span class="pct">${(prob * 100).toFixed(1)}%</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  const tabsEl = document.getElementById("marketTabs");
+  MARKETS.forEach(m => {
+    const btn = document.createElement("button");
+    btn.textContent = m.label;
+    if (m.key === currentMarket) btn.classList.add("active");
+    btn.addEventListener("click", () => { currentMarket = m.key; render(); });
+    tabsEl.appendChild(btn);
+  });
+
+  renderLineControl();
+}
+
+function renderLineControl() {
+  const wrap = document.getElementById("lineControl");
+  const p = currentPlayer;
+  let lam, defaultLine, unit;
+
+  if (currentMarket === "shots") { lam = p.projected_per_match.shots; defaultLine = 1.5; unit = "shots"; }
+  else if (currentMarket === "shots_on_target") { lam = p.projected_per_match.shots_on_target; defaultLine = 0.5; unit = "shots on target"; }
+  else if (currentMarket === "cards") { lam = p.projected_per_match.cards; defaultLine = 0.5; unit = "cards"; }
+  else { lam = p.projected_per_match.goals + p.projected_per_match.assists; defaultLine = 0.5; unit = "goal + assist involvements"; }
+
+  wrap.innerHTML = `
+    <div class="line-row">
+      <label for="lineInput">Line (over)</label>
+      <input type="number" id="lineInput" value="${defaultLine}" step="0.5" min="0">
+      <span style="color:var(--muted);font-size:13px;">${unit}</span>
+    </div>
+  `;
+
+  const input = document.getElementById("lineInput");
+  const update = () => {
+    const line = parseFloat(input.value) || 0;
+    const prob = probOver(lam, line);
+    renderResult(prob, `${p.player_name} over ${line} ${unit}`);
+  };
+  input.addEventListener("input", update);
+  update();
+}
+
+function renderResult(prob, description) {
+  const el = document.getElementById("result");
+  const pct = (prob * 100).toFixed(1);
+  el.innerHTML = `
+    <div class="pct ${prob < 0.35 ? "low" : ""}">${pct}%</div>
+    <div class="desc">${description}</div>
+    <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+  `;
+}
+
+loadData();
+</script>
+</body>
+</html>
