@@ -5,24 +5,19 @@
       "player_name": "Abdukodir Khusanov",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -36,24 +31,19 @@
       "player_name": "Allan",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -67,24 +57,19 @@
       "player_name": "Antoine Semenyo",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -98,24 +83,19 @@
       "player_name": "Ayyoub Bouaddi",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -129,24 +109,19 @@
       "player_name": "Elliot Anderson",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -160,24 +135,19 @@
       "player_name": "Enzo Fern\u00e1ndez",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -191,24 +161,19 @@
       "player_name": "Erling Haaland",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -222,24 +187,19 @@
       "player_name": "Floyd Samba",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -253,24 +213,19 @@
       "player_name": "Ger\u00f3nimo Rulli",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -284,24 +239,19 @@
       "player_name": "Gianluigi Donnarumma",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -315,24 +265,19 @@
       "player_name": "Iliman Ndiaye",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -346,24 +291,19 @@
       "player_name": "Josh Wilson-Esbrand",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -377,24 +317,19 @@
       "player_name": "Jo\u0161ko Gvardiol",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -408,24 +343,19 @@
       "player_name": "J\u00e9r\u00e9my Doku",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -439,24 +369,19 @@
       "player_name": "Marc Gu\u00e9hi",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -470,24 +395,45 @@
       "player_name": "Marcus Bettinelli",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
+      },
+      "criteria_hit": [
+        "shots_over_1.5",
+        "sot_over_0.5",
+        "to_be_carded",
+        "goal_or_assist"
+      ]
+    },
+    "Mateo Kova\u010di\u0107": {
+      "player_id": "pl_1998084",
+      "player_name": "Mateo Kova\u010di\u0107",
+      "team_id": "tm_3039",
+      "team_name": "Manchester City",
+      "expected_minutes": 45.0,
+      "projected_per_match": {
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
+      },
+      "props": {
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -501,24 +447,19 @@
       "player_name": "Matheus Nunes",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -532,24 +473,19 @@
       "player_name": "Nico O'Reilly",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -563,24 +499,19 @@
       "player_name": "Phil Foden",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -594,24 +525,19 @@
       "player_name": "Rayan A\u00eft-Nouri",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -625,24 +551,19 @@
       "player_name": "Rayan Cherki",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -656,24 +577,19 @@
       "player_name": "Rico Lewis",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -687,24 +603,19 @@
       "player_name": "Ryan McAidoo",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -718,24 +629,19 @@
       "player_name": "R\u00faben Dias",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
+      "expected_minutes": 45.0,
       "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
       },
       "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -749,2132 +655,19 @@
       "player_name": "Vitor Reis",
       "team_id": "tm_3039",
       "team_name": "Manchester City",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Daniel Mahaffy": {
-      "player_id": "pl_15433347",
-      "player_name": "Daniel Mahaffy",
-      "team_id": "tm_340605",
-      "team_name": "AFC Liverpool",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Deacon Smalley": {
-      "player_id": "pl_64039316",
-      "player_name": "Deacon Smalley",
-      "team_id": "tm_340605",
-      "team_name": "AFC Liverpool",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Jack Edwards": {
-      "player_id": "pl_29612572",
-      "player_name": "Jack Edwards",
-      "team_id": "tm_340605",
-      "team_name": "AFC Liverpool",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kyle Robinson-Murray": {
-      "player_id": "pl_30432458",
-      "player_name": "Kyle Robinson-Murray",
-      "team_id": "tm_340605",
-      "team_name": "AFC Liverpool",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Adu Emmanuel": {
-      "player_id": "pl_74001633",
-      "player_name": "Adu Emmanuel",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Alfred Owusu": {
-      "player_id": "pl_40192221",
-      "player_name": "Alfred Owusu",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Augustine Agyapong": {
-      "player_id": "pl_19966808",
-      "player_name": "Augustine Agyapong",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Benjamin Abaidoo": {
-      "player_id": "pl_36220051",
-      "player_name": "Benjamin Abaidoo",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Ebenezer Shamo": {
-      "player_id": "pl_46289821",
-      "player_name": "Ebenezer Shamo",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Emmanuel Atakora Quansah": {
-      "player_id": "pl_15804085",
-      "player_name": "Emmanuel Atakora Quansah",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Emmanuel Sarpong": {
-      "player_id": "pl_57534474",
-      "player_name": "Emmanuel Sarpong",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Eric Ofori-Antwi": {
-      "player_id": "pl_3112216",
-      "player_name": "Eric Ofori-Antwi",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Frank Oppong": {
-      "player_id": "pl_97440313",
-      "player_name": "Frank Oppong",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Gregory Obeng Sekyere": {
-      "player_id": "pl_74455690",
-      "player_name": "Gregory Obeng Sekyere",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Hubert Gyau": {
-      "player_id": "pl_73362092",
-      "player_name": "Hubert Gyau",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Issifu Mohammed": {
-      "player_id": "pl_51946431",
-      "player_name": "Issifu Mohammed",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Johnson Amuzu Kofi": {
-      "player_id": "pl_25263066",
-      "player_name": "Johnson Amuzu Kofi",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Joseph Asante": {
-      "player_id": "pl_15864619",
-      "player_name": "Joseph Asante",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kennedy Kofi Mensah": {
-      "player_id": "pl_64025054",
-      "player_name": "Kennedy Kofi Mensah",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kennedy Mensah": {
-      "player_id": "pl_73695032",
-      "player_name": "Kennedy Mensah",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kwadwo Ampem": {
-      "player_id": "pl_40125688",
-      "player_name": "Kwadwo Ampem",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kwasi Ofosu": {
-      "player_id": "pl_89702082",
-      "player_name": "Kwasi Ofosu",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kyle Zajec": {
-      "player_id": "pl_72734356",
-      "player_name": "Kyle Zajec",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Marvin Owusu": {
-      "player_id": "pl_46150862",
-      "player_name": "Marvin Owusu",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Mezack Afriyie": {
-      "player_id": "pl_36225428",
-      "player_name": "Mezack Afriyie",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Michael Mensah Awuah": {
-      "player_id": "pl_19147136",
-      "player_name": "Michael Mensah Awuah",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Mohammed Seidu": {
-      "player_id": "pl_40477566",
-      "player_name": "Mohammed Seidu",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Morrison Anokye": {
-      "player_id": "pl_83662760",
-      "player_name": "Morrison Anokye",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Prince Anane": {
-      "player_id": "pl_40119226",
-      "player_name": "Prince Anane",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Riis Opoku Twumasi": {
-      "player_id": "pl_73675749",
-      "player_name": "Riis Opoku Twumasi",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Simon Owusu": {
-      "player_id": "pl_73359557",
-      "player_name": "Simon Owusu",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Vincent Adjei": {
-      "player_id": "pl_98246632",
-      "player_name": "Vincent Adjei",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "William Bediako": {
-      "player_id": "pl_98478114",
-      "player_name": "William Bediako",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Zakaria Fuseini": {
-      "player_id": "pl_45247601",
-      "player_name": "Zakaria Fuseini",
-      "team_id": "tm_286637",
-      "team_name": "Berekum Chelsea",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Amad Diallo": {
-      "player_id": "pl_30485505",
-      "player_name": "Amad Diallo",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Andrey Santos": {
-      "player_id": "pl_74109653",
-      "player_name": "Andrey Santos",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Ayden Heaven": {
-      "player_id": "pl_74093433",
-      "player_name": "Ayden Heaven",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Benjamin \u0160e\u0161ko": {
-      "player_id": "pl_30427522",
-      "player_name": "Benjamin \u0160e\u0161ko",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Bruno Fernandes": {
-      "player_id": "pl_4724692",
-      "player_name": "Bruno Fernandes",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Bryan Mbeumo": {
-      "player_id": "pl_57338328",
-      "player_name": "Bryan Mbeumo",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Carlos Baleba": {
-      "player_id": "pl_58883966",
-      "player_name": "Carlos Baleba",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Dermot Mee": {
-      "player_id": "pl_08071434",
-      "player_name": "Dermot Mee",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Diogo Dalot": {
-      "player_id": "pl_13690681",
-      "player_name": "Diogo Dalot",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Fred Heath": {
-      "player_id": "pl_92661776",
-      "player_name": "Fred Heath",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Harry Amass": {
-      "player_id": "pl_40111467",
-      "player_name": "Harry Amass",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Harry Maguire": {
-      "player_id": "pl_1907138",
-      "player_name": "Harry Maguire",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "JJ Gabriel": {
-      "player_id": "pl_73763177",
-      "player_name": "JJ Gabriel",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Jack Fletcher": {
-      "player_id": "pl_62950193",
-      "player_name": "Jack Fletcher",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Joshua Zirkzee": {
-      "player_id": "pl_30282352",
-      "player_name": "Joshua Zirkzee",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Karl Darlow": {
-      "player_id": "pl_7416014",
-      "player_name": "Karl Darlow",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Kobbie Mainoo": {
-      "player_id": "pl_40569146",
-      "player_name": "Kobbie Mainoo",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Leny Yoro": {
-      "player_id": "pl_40572975",
-      "player_name": "Leny Yoro",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Lisandro Mart\u00ednez": {
-      "player_id": "pl_72551049",
-      "player_name": "Lisandro Mart\u00ednez",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Luke Shaw": {
-      "player_id": "pl_7341613",
-      "player_name": "Luke Shaw",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Manuel Ugarte": {
-      "player_id": "pl_45869910",
-      "player_name": "Manuel Ugarte",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Marcus Rashford": {
-      "player_id": "pl_13083574",
-      "player_name": "Marcus Rashford",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Mason Mount": {
-      "player_id": "pl_08384937",
-      "player_name": "Mason Mount",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Matheus Cunha": {
-      "player_id": "pl_57366939",
-      "player_name": "Matheus Cunha",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Matthijs de Ligt": {
-      "player_id": "pl_29670628",
-      "player_name": "Matthijs de Ligt",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Noussair Mazraoui": {
-      "player_id": "pl_13654130",
-      "player_name": "Noussair Mazraoui",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Patrick Dorgu": {
-      "player_id": "pl_83008588",
-      "player_name": "Patrick Dorgu",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Reece Munro": {
-      "player_id": "pl_19130601",
-      "player_name": "Reece Munro",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Senne Lammens": {
-      "player_id": "pl_57916129",
-      "player_name": "Senne Lammens",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Shea Lacey": {
-      "player_id": "pl_40126294",
-      "player_name": "Shea Lacey",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Tom Heaton": {
-      "player_id": "pl_974342",
-      "player_name": "Tom Heaton",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Tyler Fletcher": {
-      "player_id": "pl_19678539",
-      "player_name": "Tyler Fletcher",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Tynan Thompson": {
-      "player_id": "pl_46857747",
-      "player_name": "Tynan Thompson",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
-      },
-      "criteria_hit": [
-        "shots_over_1.5",
-        "sot_over_0.5",
-        "to_be_carded",
-        "goal_or_assist"
-      ]
-    },
-    "Youri Tielemans": {
-      "player_id": "pl_3111582",
-      "player_name": "Youri Tielemans",
-      "team_id": "tm_4643",
-      "team_name": "Manchester United",
-      "expected_minutes": 70.0,
-      "rolling_matches_used": 0,
-      "projected_per_match": {
-        "shots": 1.1666666666666667,
-        "shots_on_target": 0.4666666666666667,
-        "cards": 0.19444444444444445,
-        "goals": 0.19444444444444445,
-        "assists": 0.11666666666666667
-      },
-      "props": {
-        "shots_over_1.5": 0.325,
-        "shots_over_2.5": 0.113,
-        "sot_over_0.5": 0.373,
-        "sot_over_1.5": 0.08,
-        "to_be_carded": 0.177,
-        "to_score": 0.177,
-        "to_assist": 0.11,
-        "goal_or_assist": 0.267
+      "expected_minutes": 45.0,
+      "projected_per_match": {
+        "shots": 0.75,
+        "shots_on_target": 0.3,
+        "cards": 0.125,
+        "goals": 0.125,
+        "assists": 0.075
+      },
+      "props": {
+        "shots_over_1.5": 0.173,
+        "sot_over_0.5": 0.259,
+        "to_be_carded": 0.118,
+        "goal_or_assist": 0.181
       },
       "criteria_hit": [
         "shots_over_1.5",
@@ -2903,6 +696,7 @@
       "J\u00e9r\u00e9my Doku",
       "Marc Gu\u00e9hi",
       "Marcus Bettinelli",
+      "Mateo Kova\u010di\u0107",
       "Matheus Nunes",
       "Nico O'Reilly",
       "Phil Foden",
@@ -2911,86 +705,10 @@
       "Rico Lewis",
       "Ryan McAidoo",
       "R\u00faben Dias",
-      "Vitor Reis",
-      "Daniel Mahaffy",
-      "Deacon Smalley",
-      "Jack Edwards",
-      "Kyle Robinson-Murray",
-      "Adu Emmanuel",
-      "Alfred Owusu",
-      "Augustine Agyapong",
-      "Benjamin Abaidoo",
-      "Ebenezer Shamo",
-      "Emmanuel Atakora Quansah",
-      "Emmanuel Sarpong",
-      "Eric Ofori-Antwi",
-      "Frank Oppong",
-      "Gregory Obeng Sekyere",
-      "Hubert Gyau",
-      "Issifu Mohammed",
-      "Johnson Amuzu Kofi",
-      "Joseph Asante",
-      "Kennedy Kofi Mensah",
-      "Kennedy Mensah",
-      "Kwadwo Ampem",
-      "Kwasi Ofosu",
-      "Kyle Zajec",
-      "Marvin Owusu",
-      "Mezack Afriyie",
-      "Michael Mensah Awuah",
-      "Mohammed Seidu",
-      "Morrison Anokye",
-      "Prince Anane",
-      "Riis Opoku Twumasi",
-      "Simon Owusu",
-      "Vincent Adjei",
-      "William Bediako",
-      "William Bediako",
-      "Zakaria Fuseini",
-      "Amad Diallo",
-      "Andrey Santos",
-      "Ayden Heaven",
-      "Benjamin \u0160e\u0161ko",
-      "Bruno Fernandes",
-      "Bryan Mbeumo",
-      "Carlos Baleba",
-      "Dermot Mee",
-      "Diogo Dalot",
-      "Fred Heath",
-      "Harry Amass",
-      "Harry Maguire",
-      "JJ Gabriel",
-      "Jack Fletcher",
-      "Joshua Zirkzee",
-      "Karl Darlow",
-      "Kobbie Mainoo",
-      "Leny Yoro",
-      "Lisandro Mart\u00ednez",
-      "Luke Shaw",
-      "Manuel Ugarte",
-      "Marcus Rashford",
-      "Mason Mount",
-      "Matheus Cunha",
-      "Matthijs de Ligt",
-      "Noussair Mazraoui",
-      "Patrick Dorgu",
-      "Reece Munro",
-      "Senne Lammens",
-      "Shea Lacey",
-      "Tom Heaton",
-      "Tyler Fletcher",
-      "Tynan Thompson",
-      "Youri Tielemans"
+      "Vitor Reis"
     ],
     "top_by_market": {
       "shots_over_1.5": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
-      "shots_over_2.5": [
         "Abdukodir Khusanov",
         "Allan",
         "Antoine Semenyo",
@@ -3004,28 +722,7 @@
         "Ayyoub Bouaddi",
         "Elliot Anderson"
       ],
-      "sot_over_1.5": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
       "to_be_carded": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
-      "to_score": [
-        "Abdukodir Khusanov",
-        "Allan",
-        "Antoine Semenyo",
-        "Ayyoub Bouaddi",
-        "Elliot Anderson"
-      ],
-      "to_assist": [
         "Abdukodir Khusanov",
         "Allan",
         "Antoine Semenyo",
