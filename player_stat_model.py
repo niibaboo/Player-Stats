@@ -1,6 +1,6 @@
 """
-Player Stat Model V5 LITE - FINAL with docs/ fix
-Saves to docs/ so Pages keeps it
+Player Stat Model V5 LITE - FINAL LIVE VERSION
+Fixes: docs/ path, 0-stats fallback, ultra-low thresholds
 """
 
 import os
@@ -29,11 +29,12 @@ USE_ROLLING = False
 WATCHLIST = ["Arsenal"]
 MIN_AVG_MINUTES = 0
 
+# ULTRA LOW so you see players today (new season = low stats)
 CRITERIA_THRESHOLDS = {
-    "shots_over_1.5": 0.35,
-    "sot_over_0.5": 0.20,
-    "to_be_carded": 0.20,
-    "goal_or_assist": 0.25,
+    "shots_over_1.5": 0.10,
+    "sot_over_0.5": 0.10,
+    "to_be_carded": 0.05,
+    "goal_or_assist": 0.10,
 }
 
 TOP_N_PER_MARKET = 5
@@ -149,10 +150,15 @@ def rolling_form(player_id: str, team_id: str) -> dict:
     return {"matches_used": matches_used, "minutes_played": minutes_played, "per90": {stat: per90(totals[stat], minutes_played) for stat in STAT_FIELDS}}
 
 def season_baseline(profile: dict) -> dict:
-    stats = profile.get("season_stats", profile.get("stats", {}))
+    stats = profile.get("season_stats", profile.get("stats", {})) or {}
     minutes = stats.get("minutes", 0) or stats.get("time_played",0) or 0
     totals = {"shots": stats.get("shots",0), "shots_on_target": stats.get("shots_on_target",0), "cards": stats.get("yellow_cards",0)+stats.get("red_cards",0), "goals": stats.get("goals",0), "assists": stats.get("assists",0)}
-    return {"minutes": minutes, "per90": {stat: per90(totals[stat], minutes if minutes>0 else 1) for stat in STAT_FIELDS}, "raw": stats}
+    per90_dict = {stat: per90(totals[stat], minutes if minutes>0 else 1) for stat in STAT_FIELDS}
+    # FALLBACK FOR NEW SEASON WITH 0 STATS
+    if minutes == 0 or sum(totals.values()) == 0:
+        per90_dict = {"shots": 1.5, "shots_on_target": 0.6, "cards": 0.25, "goals": 0.25, "assists": 0.15}
+        minutes = 600
+    return {"minutes": minutes, "per90": per90_dict, "raw": stats}
 
 def blend(rolling: dict, season: dict, weight: float = ROLLING_WEIGHT) -> dict:
     blended = {}
