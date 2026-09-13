@@ -1,0 +1,858 @@
+{
+  "players": {
+    "Abi Conway": {
+      "player_id": "pl_75177911",
+      "player_name": "Abi Conway",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Alessia Russo": {
+      "player_id": "pl_13711039",
+      "player_name": "Alessia Russo",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Amy Liddiard": {
+      "player_id": "pl_79327924",
+      "player_name": "Amy Liddiard",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Anneke Borbe": {
+      "player_id": "pl_97010047",
+      "player_name": "Anneke Borbe",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Bryony-Rose Brodie": {
+      "player_id": "pl_38631677",
+      "player_name": "Bryony-Rose Brodie",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Caitlin Foord": {
+      "player_id": "pl_9722144",
+      "player_name": "Caitlin Foord",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Chloe Kelly": {
+      "player_id": "pl_30455373",
+      "player_name": "Chloe Kelly",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Daphne van Domselaar": {
+      "player_id": "pl_58413543",
+      "player_name": "Daphne van Domselaar",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Emily Fox": {
+      "player_id": "pl_58419169",
+      "player_name": "Emily Fox",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Frida Maanum": {
+      "player_id": "pl_45824028",
+      "player_name": "Frida Maanum",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Georgia Stanway": {
+      "player_id": "pl_30142665",
+      "player_name": "Georgia Stanway",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "G\u00e9raldine Reuteler": {
+      "player_id": "pl_45195189",
+      "player_name": "G\u00e9raldine Reuteler",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Isabella Damm": {
+      "player_id": "pl_15513967",
+      "player_name": "Isabella Damm",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Jennifer Beattie": {
+      "player_id": "pl_7254415",
+      "player_name": "Jennifer Beattie",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Jodie Taylor": {
+      "player_id": "pl_3821472",
+      "player_name": "Jodie Taylor",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Katie Reid": {
+      "player_id": "pl_01359028",
+      "player_name": "Katie Reid",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Kim Little": {
+      "player_id": "pl_6192282",
+      "player_name": "Kim Little",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Kyra Cooney-Cross": {
+      "player_id": "pl_45210046",
+      "player_name": "Kyra Cooney-Cross",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Leah Williamson": {
+      "player_id": "pl_1513491",
+      "player_name": "Leah Williamson",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Lisa Baum": {
+      "player_id": "pl_37575077",
+      "player_name": "Lisa Baum",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Lotte Wubben-Moy": {
+      "player_id": "pl_19441346",
+      "player_name": "Lotte Wubben-Moy",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Mariona Caldentey": {
+      "player_id": "pl_57931647",
+      "player_name": "Mariona Caldentey",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Mia Dixon": {
+      "player_id": "pl_79656119",
+      "player_name": "Mia Dixon",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Michelle Agyemang": {
+      "player_id": "pl_97234979",
+      "player_name": "Michelle Agyemang",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Misa Rodr\u00edguez": {
+      "player_id": "pl_25903895",
+      "player_name": "Misa Rodr\u00edguez",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Olivia Smith": {
+      "player_id": "pl_72712116",
+      "player_name": "Olivia Smith",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Ona Batlle": {
+      "player_id": "pl_96346118",
+      "player_name": "Ona Batlle",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Selina Cerci": {
+      "player_id": "pl_58668155",
+      "player_name": "Selina Cerci",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Smilla Holmberg": {
+      "player_id": "pl_01325800",
+      "player_name": "Smilla Holmberg",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Steph Catley": {
+      "player_id": "pl_45770409",
+      "player_name": "Steph Catley",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Stina Blackstenius": {
+      "player_id": "pl_7960651",
+      "player_name": "Stina Blackstenius",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "Taylor Hinds": {
+      "player_id": "pl_30358883",
+      "player_name": "Taylor Hinds",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    },
+    "\u00c9lisa de Almeida": {
+      "player_id": "pl_61064099",
+      "player_name": "\u00c9lisa de Almeida",
+      "team_id": "tm_515555",
+      "expected_minutes": 70.0,
+      "rolling_matches_used": 0,
+      "projected_per_match": {
+        "shots": 0.0,
+        "shots_on_target": 0.0,
+        "cards": 0.0,
+        "goals": 0.0,
+        "assists": 0.0
+      },
+      "props": {
+        "shots_over_1.5": 0.0,
+        "shots_over_2.5": 0.0,
+        "sot_over_0.5": 0.0,
+        "sot_over_1.5": 0.0,
+        "to_be_carded": 0.0,
+        "to_score": 0.0,
+        "to_assist": 0.0,
+        "goal_or_assist": 0.0
+      }
+    }
+  },
+  "screener": {
+    "generated_at": "2026-09-13",
+    "qualifying": [],
+    "top_by_market": {
+      "shots_over_1.5": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "shots_over_2.5": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "sot_over_0.5": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "sot_over_1.5": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "to_be_carded": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "to_score": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "to_assist": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ],
+      "goal_or_assist": [
+        "Abi Conway",
+        "Alessia Russo",
+        "Amy Liddiard",
+        "Anneke Borbe",
+        "Bryony-Rose Brodie"
+      ]
+    }
+  }
+}
